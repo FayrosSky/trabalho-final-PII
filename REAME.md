@@ -115,5 +115,10 @@ codeaprende/
 ---
 
 ## 🔗 Links do Projeto
+https://codeaprende.netlify.app/
 
 ### 🌐 GitHub Pages (Site Ao Vivo)
+https://github.com/FayrosSky/trabalho-final-PII
+
+## Link do vídeo
+https://youtu.be/vU0gduP3Ics
