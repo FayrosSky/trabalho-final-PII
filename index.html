@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprenda desenvolvimento front-end do zero. Cursos gratuitos de HTML, CSS e JavaScript">
+    <title>CodeAprende - Aprenda Front-End do Zero</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon">⚡</span>
+                CodeAprende
+            </a>
+            
+            <button class="nav-toggle" aria-label="Abrir menu">
+                <span class="hamburger"></span>
+            </button>
+            
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Início</a></li>
+                <li><a href="#courses" class="nav-link">Cursos</a></li>
+                <li><a href="#about" class="nav-link">Sobre</a></li>
+                <li><a href="#contact" class="nav-link">Contato</a></li>
+                <li><a href="html/index.html" class="btn btn-nav">Começar Agora</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <span class="hero-badge">🎓 Curso 100% Gratuito</span>
+                <h1>
+                    Aprenda <span class="highlight">Desenvolvimento Front-End</span> 
+                    do Zero ao Profissional
+                </h1>
+                <p class="hero-subtitle">
+                    Dominar HTML, CSS e JavaScript nunca foi tão fácil. 
+                    Aulas práticas, exemplos reais e caminho definido para você 
+                    se tornar um desenvolvedor front-end em 2026.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Cursos Completos</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Aulas Práticas</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">0h</span>
+                        <span class="stat-label">Custo</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="html/index.html" class="btn btn-primary btn-large">
+                        🚀 Começar do Zero
+                    </a>
+                    <a href="#courses" class="btn btn-secondary btn-large">
+                        Ver Cursos
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="code-preview">
+                    <div class="code-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="filename">index.html</span>
+                    </div>
+                    <pre class="code-content"><code><span class="tag">&lt;!DOCTYPE</span> <span class="attr">html</span><span class="tag">&gt;</span>
+<span class="tag">&lt;html</span> <span class="attr">lang</span>=<span class="string">"pt-BR"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;head&gt;</span>
+    <span class="tag">&lt;title</span><span class="tag">&gt;</span>Olá, Mundo!<span class="tag">&lt;/title&gt;</span>
+  <span class="tag">&lt;/head&gt;</span>
+  <span class="tag">&lt;body&gt;</span>
+    <span class="tag">&lt;h1&gt;</span>Seu futuro começa aqui!<span class="tag">&lt;/h1&gt;</span>
+  <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span></code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CURSOS / MÓDULOS -->
+    <section id="courses" class="courses">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Nossos Cursos de Front-End
+                </h2>
+                <p class="section-subtitle">
+                    Trilha completa de aprendizado: do HTML básico até JavaScript avançado
+                </p>
+            </div>
+            
+            <div class="courses-grid">
+                
+                <!-- CURSO HTML -->
+                <article class="course-card html">
+                    <div class="course-badge">Módulo 1</div>
+                    <div class="course-icon">📝</div>
+                    <h3 class="course-title">HTML5 Completo</h3>
+                    <p class="course-description">
+                        Aprenda a estrutura da web. Do básico de tags até formulários 
+                        avançados e HTML semântico.
+                    </p>
+                    <div class="course-meta">
+                        <div class="meta-item">
+                            <span class="icon">⏱️</span>
+                            <span>15 aulas</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="icon">📊</span>
+                            <span>Iniciante</span>
+                        </div>
+                    </div>
+                    <ul class="course-lessons">
+                        <li>✅ O que é HTML e como funciona a web</li>
+                        <li>✅ Tags básicas e estrutura de página</li>
+                        <li>✅ Formulários e validação</li>
+                        <li>✅ HTML semântico e acessibilidade</li>
+                        <li>✅ SEO básico para sites</li>
+                    </ul>
+                    <div class="course-footer">
+                        <a href="html/index.html" class="btn btn-course">
+                            Começar HTML →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- CURSO CSS -->
+                <article class="course-card css">
+                    <div class="course-badge">Módulo 2</div>
+                    <div class="course-icon">🎨</div>
+                    <h3 class="course-title">CSS3 Moderno</h3>
+                    <p class="course-description">
+                        Estilize sites bonitos e responsivos. Flexbox, Grid, 
+                        animações e design moderno.
+                    </p>
+                    <div class="course-meta">
+                        <div class="meta-item">
+                            <span class="icon">⏱️</span>
+                            <span>20 aulas</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="icon">📊</span>
+                            <span>Iniciante-Interm.</span>
+                        </div>
+                    </div>
+                    <ul class="course-lessons">
+                        <li>✅ Fundamentos do CSS e seletores</li>
+                        <li>✅ Box Model e posicionamento</li>
+                        <li>✅ Flexbox e Grid Layout</li>
+                        <li>✅ Responsividade e Media Queries</li>
+                        <li>✅ Animations e Transitions</li>
+                    </ul>
+                    <div class="course-footer">
+                        <a href="css/index.html" class="btn btn-course">
+                            Começar CSS →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- CURSO JAVASCRIPT -->
+                <article class="course-card js">
+                    <div class="course-badge">Módulo 3</div>
+                    <div class="course-icon">⚡</div>
+                    <h3 class="course-title">JavaScript modern</h3>
+                    <p class="course-description">
+                        Torna sites interativos. Do básico de variáveis até 
+                        DOM, APIs e ES6+.
+                    </p>
+                    <div class="course-meta">
+                        <div class="meta-item">
+                            <span class="icon">⏱️</span>
+                            <span>25 aulas</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="icon">📊</span>
+                            <span>Iniciante-Avançado</span>
+                        </div>
+                    </div>
+                    <ul class="course-lessons">
+                        <li>✅ Fundamentos: variáveis, tipos, operadores</li>
+                        <li>✅ Estruturas de controle e loops</li>
+                        <li>✅ Funções e escopo</li>
+                        <li>✅ DOM e eventos</li>
+                        <li>✅ Fetch API e async/await</li>
+                        <li>✅ ES6+: arrow functions, destructuring</li>
+                    </ul>
+                    <div class="course-footer">
+                        <a href="javascript/index.html" class="btn btn-course">
+                            Começar JavaScript →
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- TRILHA DE APRENDIZADO -->
+            <div class="learning-path">
+                <h3>🗺️ Trilha de Aprendizado Recomendada</h3>
+                <div class="path-steps">
+                    <div class="path-step completed">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <span class="step-title">HTML5</span>
+                            <span class="step-desc">Estrutura da web</span>
+                        </div>
+                        <div class="step-arrow">→</div>
+                    </div>
+                    <div class="path-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <span class="step-title">CSS3</span>
+                            <span class="step-desc">Estilo e layout</span>
+                        </div>
+                        <div class="step-arrow">→</div>
+                    </div>
+                    <div class="path-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <span class="step-title">JavaScript</span>
+                            <span class="step-desc">Interatividade</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- POR QUE APRENDER FRONT-END? -->
+    <section class="why-frontend">
+        <div class="container">
+            <h2 class="section-title">Por que se tornar um Dev Front-End?</h2>
+            <div class="reasons-grid">
+                
+                <div class="reason-card">
+                    <div class="reason-icon">💼</div>
+                    <h3>Alta Demanda</h3>
+                    <p>
+                        Mais de 50.000 vagas abertas para desenvolvedores front-end 
+                        no Brasil em 2026. Mercado em constante crescimento.
+                    </p>
+                </div>
+
+                <div class="reason-card">
+                    <div class="reason-icon">💰</div>
+                    <h3>Salário Atraente</h3>
+                    <p>
+                        Júnior: R$ 3.000-5.000 |Pleno: R$ 6.000-10.000 | 
+                        Sênior: R$ 12.000+
+                    </p>
+                </div>
+
+                <div class="reason-card">
+                    <div class="reason-icon">🌍</div>
+                    <h3>Trabalho Remoto</h3>
+                    <p>
+                        Uma das profissões com mais oportunidades de trabalho 
+                        home office e internacional.
+                    </p>
+                </div>
+
+                <div class="reason-card">
+                    <div class="reason-icon">🚀</div>
+                    <h3>Crescimento Rápido</h3>
+                    <p>
+                        De iniciante a empregável em 6-12 meses com dedicação 
+                        e prática constante.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Como Funciona o Curso</h2>
+            <div class="steps-grid">
+                
+                <div class="step-card">
+                    <div class="step-icon">📖</div>
+                    <h3>1. Leia a Teoria</h3>
+                    <p>
+                        Cada aula começa com explicação clara dos conceitos, 
+                        com exemplos do mundo real.
+                    </p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-icon">💻</div>
+                    <h3>2. Veja o Código</h3>
+                    <p>
+                        Exemplos práticos completos, prontos para copiar 
+                        e testar no seu computador.
+                    </p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-icon">✍️</div>
+                    <h3>3. Pratique</h3>
+                    <p>
+                        Exercícios ao final de cada aula para fixar 
+                        o conhecimento aprendido.
+                    </p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-icon">🏆</div>
+                    <h3>4. Construa Projetos</h3>
+                    <p>
+                        Ao final de cada módulo, crie projetos reais 
+                        para seu portfólio.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Sobre o CodeAprende</h2>
+                    <p>
+                        O <strong>CodeAprende</strong> é um projeto educacional 
+                        criado para democratizar o ensino de desenvolvimento web 
+                        no Brasil. Acreditamos que todo mundo merece uma chance 
+                        de aprender a programar, independentemente de sua origem 
+                        ou situação financeira.
+                    </p>
+                    <p>
+                        Nosso conteúdo é 100% gratuito, atualizado regularmente 
+                        e criado por desenvolvedores experientes que entendem 
+                        as dificuldades de quem está começando.
+                    </p>
+                    <div class="about-values">
+                        <div class="value-item">
+                            <span class="value-icon">🎯</span>
+                            <span>Ensino prático e direto</span>
+                        </div>
+                        <div class="value-item">
+                            <span class="value-icon">🆓</span>
+                            <span>100% Gratuito</span>
+                        </div>
+                        <div class="value-item">
+                            <span class="value-icon">🇧🇷</span>
+                            <span>Em português</span>
+                        </div>
+                        <div class="value-item">
+                            <span class="value-icon">🔄</span>
+                            <span>Conteúdo atualizado</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="code-block">
+                        <pre><code>const motivacao = "Nunca desista";
+const pratica = "Todo dia";
+const sucesso = 
+
+程序中继 {
+  return motivacao + prática;
+}
+
+console.log(sucesso);</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Temos uma dúvida?</h3>
+                    <p>
+                        Estamos aqui para ajudar! Envie sua pergunta 
+                        e responderemos o mais rápido possível.
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="icon">📧</span>
+                            <a href="mailto:contato@codeaprende.com">
+                                contato@codeaprende.com
+                            </a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon">💬</span>
+                            <a href="#" target="_blank">Discord da Comunidade</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon">📱</span>
+                            <a href="#" target="_blank">Instagram</a>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Nome *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Assunto</label>
+                        <select id="subject" name="subject">
+                            <option value="dúvida">Dúvida sobre aula</option>
+                            <option value="sugestão">Sugestão de conteúdo</option>
+                            <option value="erro">Relatar erro</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem *</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        Enviar Mensagem
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">⚡</span>
+                    <span class="brand-name">CodeAprende</span>
+                    <p>Ensino de front-end gratuito e de qualidade para todos.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Cursos</h4>
+                        <ul>
+                            <li><a href="html/index.html">HTML5</a></li>
+                            <li><a href="css/index.html">CSS3</a></li>
+                            <li><a href="javascript/index.html">JavaScript</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Recursos</h4>
+                        <ul>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Comunidade</a></li>
+                            <li><a href="#">Portfólios</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Social</h4>
+                        <ul>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">YouTube</a></li>
+                            <li><a href="#">GitHub</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>
+                    © 2026 CodeAprende. Criado com 💜 para a comunidade de desenvolvedores brasileira.
+                </p>
+                <p class="footer-note">
+                    Projeto educacional - Conteúdo 100% gratuito
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

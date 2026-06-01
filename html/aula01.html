@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 01: O que é HTML? - CodeAprende</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="../index.html" class="nav-logo">⚡ CodeAprende</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="index.html" class="active">HTML</a></li>
+                <li><a href="../css/index.html">CSS</a></li>
+                <li><a href="../javascript/index.html">JS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="course-page">
+        <section class="course-header html">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="../index.html">Início</a> → 
+                    <a href="index.html">HTML5</a> → 
+                    <span>Aula 01</span>
+                </div>
+                <h1>📝 Aula 01: O que é HTML?</h1>
+                <p class="course-intro">
+                    Descubra o que é HTML, como funciona a web e por que esta linguagem 
+                    é a base de tudo no desenvolvimento front-end.
+                </p>
+            </div>
+        </section>
+
+        <section class="course-content">
+            <div class="container">
+                <div class="course-layout">
+                    
+                    <aside class="lessons-sidebar">
+                        <h3>📚 Conteúdo do Curso</h3>
+                        <ol class="lessons-list">
+                            <li class="lesson-item active">
+                                <a href="aula01.html" class="lesson-link">
+                                    <span class="lesson-number">01</span>
+                                    <div class="lesson-info">
+                                        <span class="lesson-title">O que é HTML?</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="lesson-item">
+                                <a href="aula02.html" class="lesson-link">
+                                    <span class="lesson-number">02</span>
+                                    <div class="lesson-info">
+                                        <span class="lesson-title">Tags básicas</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="lesson-item">
+                                <a href="aula03.html" class="lesson-link">
+                                    <span class="lesson-number">03</span>
+                                    <div class="lesson-info">
+                                        <span class="lesson-title">Formulários</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ol>
+                    </aside>
+
+                    <div class="main-content">
+                        <article class="lesson-content">
+                            <header class="lesson-header">
+                                <span class="lesson-badge">Aula 01</span>
+                                <h2>O que você vai aprender</h2>
+                            </header>
+
+                            <section class="lesson-body">
+                                <ul class="learning-objectives">
+                                    <li>✅ O significado de HTML</li>
+                                    <li>✅ Como funciona a web</li>
+                                    <li>✅ O papel do HTML no front-end</li>
+                                    <li>✅ Ferramentas necessárias</li>
+                                </ul>
+
+                                <h2>📖 O que é HTML?</h2>
+                                <p>
+                                    <strong>HTML</strong> significa <em>HyperText Markup Language</em> 
+                                    (Linguagem de Marcação de Hipertexto). É a linguagem que define 
+                                    a <strong>estrutura</strong> de páginas web [web:1].
+                                </p>
+                                
+                                <div class="info-box">
+                                    <h3>💡 Analogia Simples</h3>
+                                    <p>
+                                        Imagine que um site é como uma casa:
+                                    </p>
+                                    <ul>
+                                        <li><strong>HTML</strong> = Estrutura (alicerces, paredes, tetos)</li>
+                                        <li><strong>CSS</strong> = Decoração (pintura, móveis, estilo)</li>
+                                        <li><strong>JavaScript</strong> = Funcionalidades (eletricidade, água, portão automático)</li>
+                                    </ul>
+                                </div>
+
+                                <h2>🏗️ Estrutura Básica de um Arquivo HTML</h2>
+                                <p>Todo arquivo HTML segue esta estrutura:</p>
+
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">exemplo-basico.html</span>
+                                    </div>
+                                    <pre><code><span class="comment">&lt;!-- 1. Declara que é HTML5 --&gt;</span>
+<span class="tag">&lt;!DOCTYPE</span> <span class="attr">html</span><span class="tag">&gt;</span>
+
+<span class="comment">&lt;!-- 2. Elemento raiz da página --&gt;</span>
+<span class="tag">&lt;html</span> <span class="attr">lang</span>=<span class="string">"pt-BR"</span><span class="tag">&gt;</span>
+
+<span class="comment">&lt;!-- 3. Cabeçalho (metadados) --&gt;</span>
+<span class="tag">&lt;head&gt;</span>
+    <span class="tag">&lt;meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;title&gt;</span>Minha Primeira Página<span class="tag">&lt;/title&gt;</span>
+<span class="tag">&lt;/head&gt;</span>
+
+<span class="comment">&lt;!-- 4. Corpo (conteúdo visível) --&gt;</span>
+<span class="tag">&lt;body&gt;</span>
+    <span class="tag">&lt;h1&gt;</span>Olá, Mundo!<span class="tag">&lt;/h1&gt;</span>
+    <span class="tag">&lt;p&gt;</span>Este é meu primeiro site!<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;/body&gt;</span>
+
+<span class="tag">&lt;/html&gt;</span></code></pre>
+                                </div>
+
+                                <h3>📌 Explicação linha por linha:</h3>
+                                <table class="explanation-table">
+                                    <tr>
+                                        <td><code>&lt;!DOCTYPE html&gt;</code></td>
+                                        <td>Informa ao navegador que é HTML5 [web:1]</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>&lt;html lang="pt-BR"&gt;</code></td>
+                                        <td>Elemento raiz, define o idioma como português do Brasil</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>&lt;head&gt;</code></td>
+                                        <td>Cabeçalho: contém metadados (informações sobre a página)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>&lt;meta charset="UTF-8"&gt;</code></td>
+                                        <td>Codificação de caracteres (permite acentos e emojis)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>&lt;title&gt;</code></td>
+                                        <td>Título que aparece na aba do navegador</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>&lt;body&gt;</code></td>
+                                        <td>Corpo: conteúdo visível na página</td>
+                                    </tr>
+                                </table>
+
+                                <h2>🌐 Como Funciona a Web?</h2>
+                                <p>Quando você acessa um site, acontece o seguinte:</p>
+
+                                <div class="process-diagram">
+                                    <div class="process-step">
+                                        <span class="step-icon">📱</span>
+                                        <h4>1. Você digita o URL</h4>
+                                        <p>Ex: <code>www.google.com</code></p>
+                                    </div>
+                                    <div class="process-arrow">→</div>
+                                    <div class="process-step">
+                                        <span class="step-icon">🌐</span>
+                                        <h4>2. Navegador pede o arquivo</h4>
+                                        <p>Para o servidor</p>
+                                    </div>
+                                    <div class="process-arrow">→</div>
+                                    <div class="process-step">
+                                        <span class="step-icon">💾</span>
+                                        <h4>3. Servidor envia HTML</h4>
+                                        <p>Arquivo da página</p>
+                                    </div>
+                                    <div class="process-arrow">→</div>
+                                    <div class="process-step">
+                                        <span class="step-icon">🖥️</span>
+                                        <h4>4. Navegador "desenha"</h4>
+                                        <p>Renderiza a página</p>
+                                    </div>
+                                </div>
+
+                                <h2>🛠️ Ferramentas que Você Precisa</h2>
+                                <p>Para começar a programar em HTML, você precisa apenas de:</p>
+
+                                <div class="tools-grid">
+                                    <div class="tool-card">
+                                        <div class="tool-icon">📝</div>
+                                        <h4>1. Editor de Código</h4>
+                                        <p>
+                                            <strong>Recomendado:</strong> 
+                                            <a href="https://code.visualstudio.com" target="_blank">VS Code</a> (gratuito)
+                                        </p>
+                                        <p>Otimize sua programação com 자동 완성, syntax highlighting e extensões.</p>
+                                    </div>
+
+                                    <div class="tool-card">
+                                        <div class="tool-icon">🌐</div>
+                                        <h4>2. Navegador</h4>
+                                        <p>
+                                            <strong>Recomendados:</strong> 
+                                            Chrome, Firefox ou Edge
+                                        </p>
+                                        <p>Use o DevTools (F12) para inspecionar e debugar código.</p>
+                                    </div>
+                                </div>
+
+                                <h2>✍️ Exercício Prático: Sua Primeira Página</h2>
+                                <div class="exercise-box">
+                                    <h4>📝 Criando seu Primeiro Site</h4>
+                                    <ol>
+                                        <li>Abra o VS Code</li>
+                                        <li>Crie uma nova pasta chamada <code>meu-primeiro-site</code></li>
+                                        <li>Dentro dela, crie um arquivo chamado <code>index.html</code></li>
+                                        <li>Cole o código de exemplo acima</li>
+                                        <li>Salve o arquivo (<code>Ctrl + S</code>)</li>
+                                        <li>Abra o arquivo no navegador (duplo clique ou arraste)</li>
+                                        <li>Parabéns! 🎉 Você criou seu primeiro site!</li>
+                                    </ol>
+                                </div>
+
+                                <h2>🎯 Resumo da Aula</h2>
+                                <div class="summary-box">
+                                    <ul class="summary-list">
+                                        <li>HTML = <strong>HyperText Markup Language</strong></li>
+                                        <li>HTML define a <strong>estrutura</strong> do conteúdo</li>
+                                        <li>Toda página HTML tem: <code>&lt;!DOCTYPE&gt;</code>, <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;body&gt;</code></li>
+                                        <li>Você precisa apenas de VS Code + Navegador para começar</li>
+                                        <li>HTML é a <strong>base</strong> de todo desenvolvimento web</li>
+                                    </ul>
+                                </div>
+
+                                <h2>🧠 Quiz Rápido</h2>
+                                <div class="quiz-box">
+                                    <h4>Pergunta 1:</h4>
+                                    <p>O que HTML significa?</p>
+                                    <details>
+                                        <summary>Ver resposta</summary>
+                                        <p><strong>Resposta:</strong> HyperText Markup Language (Linguagem de Marcação de Hipertexto)</p>
+                                    </details>
+                                    
+                                    <h4>Pergunta 2:</h4>
+                                    <p>Qual tag contém o conteúdo visível da página?</p>
+                                    <details>
+                                        <summary>Ver resposta</summary>
+                                        <p><strong>Resposta:</strong> <code>&lt;body&gt;</code></p>
+                                    </details>
+                                </div>
+
+                                <div class="next-lesson">
+                                    <a href="aula02.html" class="btn btn-primary btn-large">
+                                        Próxima Aula: Tags Básicas →
+                                    </a>
+                                </div>
+                            </section>
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 CodeAprende - Ensino de front-end gratuito</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 03: Funções - CodeAprende</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="../index.html" class="nav-logo">⚡ CodeAprende</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="../html/index.html">HTML</a></li>
+                <li><a href="../css/index.html">CSS</a></li>
+                <li><a href="index.html" class="active">JS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="course-page">
+        <section class="course-header js">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="../index.html">Início</a> → 
+                    <a href="index.html">JavaScript</a> → 
+                    <span>Aula 03</span>
+                </div>
+                <h1>⚡ Aula 03: Funções em JavaScript</h1>
+                <p class="course-intro">
+                    Aprenda a criar funções tradicionais, arrow functions, parâmetros, 
+                    retorno de valores e muito mais.
+                </p>
+            </div>
+        </section>
+
+        <section class="course-content">
+            <div class="container">
+                <div class="course-layout">
+                    
+                    <aside class="lessons-sidebar">
+                        <h3>📚 Conteúdo do Curso</h3>
+                        <ol class="lessons-list">
+                            <li class="lesson-item">
+                                <a href="aula01.html" class="lesson-link">
+                                    <span class="lesson-number">01</span>
+                                    <div class="lesson-info">
+                                        <span class="lesson-title">O que é JS?</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="lesson-item">
+                                <a href="aula02.html" class="lesson-link">
+                                    <span class="lesson-number">02</span>
+                                    <div class="lesson-info">
+                                        <span class="lesson-title">Variáveis</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="lesson-item active">
+                                <a href="aula03.html" class="lesson-link">
+                                    <span class="lesson-number">03</span>
+                                    <div class="lesson-info">
+                                        <span class="lesson-title">Funções</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ol>
+                    </aside>
+
+                    <div class="main-content">
+                        <article class="lesson-content">
+                            <header class="lesson-header">
+                                <span class="lesson-badge">Aula 03</span>
+                                <h2>Funções em JavaScript</h2>
+                            </header>
+
+                            <section class="lesson-body">
+                                <h2>📖 O que é uma Função?</h2>
+                                <p>
+                                    <strong>Função</strong> é um bloco de código que realiza uma tarefa específica. 
+                                    Você pode "chamar" a função quantas vezes quiser, sem precisar reescrever o código.
+                                </p>
+
+                                <div class="info-box">
+                                    <h3>💡 Analogia: Função = Receita de Bolo</h3>
+                                    <p>
+                                        Uma receita tem passos para fazer um bolo. Você pode usar a mesma 
+                                        receita várias vezes para fazer vários bolos. A função é igual: 
+                                        uma "receita" de código que você reutiliza.
+                                    </p>
+                                </div>
+
+                                <h2>🎯 1. Função Declarativa (Tradicional)</h2>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">funcao-tradicional.js</span>
+                                    </div>
+                                    <pre><code><span class="comment">/* Sintaxe: function nome() { } */</span>
+
+<span class="keyword">function</span> <span class="function">saudacao</span>() {
+    console.log(<span class="string">"Olá, mundo!"</span>);
+}
+
+<span class="comment">// Chamando a função</span>
+saudacao();  <span class="comment">/* Saída: Olá, mundo! */</span>
+
+<span class="comment">// Pode chamar várias vezes</span>
+saudacao();  <span class="comment">/* Olá, mundo! */</span>
+saudacao();  <span class="comment">/* Olá, mundo! */</span></code></pre>
+                                </div>
+
+                                <h2>🎯 2. Função com Parâmetros</h2>
+                                <p>Parâmetros são "variáveis" que a função recebe:</p>
+
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">funcao-parametros.js</span>
+                                    </div>
+                                    <pre><code><span class="keyword">function</span> <span class="function">saudacaoNome</span>(nome) {
+    console.log(<span class="string">"Olá, "</span> + nome + <span class="string">"!"</span>);
+}
+
+saudacaoNome(<span class="string">"Davyd"</span>);     <span class="comment">/* Olá, Davyd! */</span>
+saudacaoNome(<span class="string">"Maria"</span>);     <span class="comment">/* Olá, Maria! */</span>
+
+<span class="comment">// Múltiplos parâmetros</span>
+<span class="keyword">function</span> <span class="function">somar</span>(a, b) {
+    console.log(a + b);
+}
+
+somar(<span class="number">5</span>, <span class="number">3</span>);    <span class="comment">/* 8 */</span>
+somar(<span class="number">10</span>, <span class="number">20</span>);   <span class="comment">/* 30 */</span></code></pre>
+                                </div>
+
+                                <div class="info-box">
+                                    <p>💡 Parâmetros são como variáveis locais da função.</p>
+                                </div>
+
+                                <h2>🎯 3. Função com Return (Retorno)</h2>
+                                <p><code>return</code> devolve um valor para quem chamou a função:</p>
+
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">funcao-return.js</span>
+                                    </div>
+                                    <pre><code><span class="keyword">function</span> <span class="function">somar</span>(a, b) {
+    <span class="keyword">return</span> a + b;  <span class="comment">/* devolve o resultado */</span>
+}
+
+<span class="keyword">const</span> resultado = somar(<span class="number">5</span>, <span class="number">3</span>);
+console.log(resultado);  <span class="comment">/* 8 */</span>
+
+<span class="comment">// Usando o retorno</span>
+<span class="keyword">const</span> dobro = somar(<span class="number">5</span>, <span class="number">5</span>) * <span class="number">2</span>;
+console.log(dobro);  <span class="comment">/* 20 */</span>
+
+<span class="comment">// O return termina a função</span>
+<span class="keyword">function</span> <span class="function">verificarIdade</span>(idade) {
+    <span class="keyword">if</span> (idade >= <span class="number">18</span>) {
+        <span class="keyword">return</span> <span class="string">"Maior de idade"</span>;
+    }
+    <span class="keyword">return</span> <span class="string">"Menor de idade"</span>;  <span class="comment">/* só chega aqui se idade < 18 */</span>
+}
+
+console.log(verificarIdade(<span class="number">20</span>));  <span class="comment">/* Maior de idade */</span>
+console.log(verificarIdade(<span class="number">15</span>));  <span class="comment">/* Menor de idade */</span></code></pre>
+                                </div>
+
+                                <div class="info-box">
+                                    <h3>⚠️ Importante sobre return</h3>
+                                    <p>
+                                        Quando o <code>return</code> é executado, a função PARALIZA imediatamente. 
+                                        Qualquer código depois do <code>return</code> não é executado.
+                                    </p>
+                                </div>
+
+                                <h2>🎯 4. Função com Parâmetro Padrão</h2>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">parametro-padrao.js</span>
+                                    </div>
+                                    <pre><code><span class="keyword">function</span> <span class="function">saudacao</span>(nome = <span class="string">"Visitante"</span>) {
+    console.log(<span class="string">`Olá, ${nome}!`</span>);
+}
+
+saudacao();           <span class="comment">/* Olá, Visitante! */</span>
+saudacao(<span class="string">"Davyd"</span>);    <span class="comment">/* Olá, Davyd! */</span>
+
+<span class="comment">// Valores padrão para números</span>
+<span class="keyword">function</span> <span class="function">multiplicar</span>(a, b = <span class="number">2</span>) {
+    <span class="keyword">return</span> a * b;
+}
+
+console.log(multiplicar(<span class="number">5</span>));      <span class="comment">/* 10 (5 * 2) */</span>
+console.log(multiplicar(<span class="number">5</span>, <span class="number">3</span>));   <span class="comment">/* 15 (5 * 3) */</span></code></pre>
+                                </div>
+
+                                <h2>🎯 5. Arrow Function (ES6+) ⭐ RECOMENDADO</h2>
+                                <p>Sintaxe mais curta e moderna para criar funções:</p>
+
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">arrow-function.js</span>
+                                    </div>
+                                    <pre><code><span class="comment">/* Sintaxe: const nome = (param) => { } */</span>
+
+<span class="comment">// Função tradicional</span>
+<span class="keyword">function</span> <span class="function">saudacao</span>() {
+    console.log(<span class="string">"Olá!"</span>);
+}
+
+<span class="comment">// Arrow function (mesmo comportamento)</span>
+<span class="keyword">const</span> saudacao = () => {
+    console.log(<span class="string">"Olá!"</span>);
+};
+
+saudacao();  <span class="comment">/* Olá! */</span></code></pre>
+                                </div>
+
+                                <h3>Arrow Function com Parâmetros</h3>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">arrow-parametros.js</span>
+                                    </div>
+                                    <pre><code><span class="comment">// Um parâmetro (pode tirar parênteses)</span>
+<span class="keyword">const</span> dobrar = num => num * <span class="number">2</span>;
+
+console.log(dobrar(<span class="number">5</span>));  <span class="comment">/* 10 */</span>
+
+<span class="comment">// Múltiplos parâmetros (precisa de parênteses)</span>
+<span class="keyword">const</span> somar = (a, b) => a + b;
+
+console.log(somar(<span class="number">3</span>, <span class="number">7</span>));  <span class="comment">/* 10 */</span>
+
+<span class="comment">// Sem parâmetro</span>
+<span class="keyword">const</span> saudacao = () => {
+    console.log(<span class="string">"Olá!"</span>);
+};</code></pre>
+                                </div>
+
+                                <h3>Arrow Function com Return Implícito</h3>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">arrow-return-implicito.js</span>
+                                    </div>
+                                    <pre><code><span class="comment">// Traditional com return</span>
+<span class="keyword">function</span> <span class="function">quadrado</span>(num) {
+    <span class="keyword">return</span> num * num;
+}
+
+<span class="comment">// Arrow function com return implícito</span>
+<span class="keyword">const</span> quadrado = num => num * num;
+
+<span class="comment">// Mesma coisa! O return é automático quando não tem { }</span>
+
+console.log(quadrado(<span class="number">4</span>));  <span class="comment">/* 16 */</span></code></pre>
+                                </div>
+
+                                <div class="info-box">
+                                    <h3>📌 Quando usar Arrow Function?</h3>
+                                    <ul>
+                                        <li>✅ Para funções curtas e simples</li>
+                                        <li>✅ Como callback em métodos de array (map, filter, reduce)</li>
+                                        <li>✅ Quando não precisa de <code>this</code></li>
+                                        <li>⚠️ Não use para métodos de objeto</li>
+                                    </ul>
+                                </div>
+
+                                <h2>🎯 6. Função IIFE (Imediatamente Executada)</h2>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">iife.js</span>
+                                    </div>
+                                    <pre><code><span class="comment">/* Função que executa assim que é definida */</span>
+
+(<span class="keyword">function</span>() {
+    console.log(<span class="string">"Executou imediatamente!"</span>);
+})();
+
+<span class="comment">// Arrow function IIFE</span>
+(() => {
+    console.log(<span class="string">"Também executa agora!"</span>);
+})();</code></pre>
+                                </div>
+
+                                <h2>✍️ Exercício Prático: Calculadora Completa</h2>
+                                <div class="exercise-box">
+                                    <h4>📝 Criando uma calculadora com funções</h4>
+                                    <div class="code-example">
+                                        <pre><code><span class="comment">// Calculadora com funções</span>
+
+<span class="keyword">const</span> <span class="function">somar</span> = (a, b) => a + b;
+<span class="keyword">const</span> <span class="function">subtrair</span> = (a, b) => a - b;
+<span class="keyword">const</span> <span class="function">multiplicar</span> = (a, b) => a * b;
+<span class="keyword">const</span> <span class="function">dividir</span> = (a, b) => {
+    <span class="keyword">if</span> (b === <span class="number">0</span>) {
+        <span class="keyword">return</span> <span class="string">"Erro: divisão por zero!"</span>;
+    }
+    <span class="keyword">return</span> a / b;
+};
+
+<span class="keyword">const</span> <span class="function">porcentagem</span> = (valor, porcento) => {
+    <span class="keyword">return</span> (valor * porcento) / <span class="number">100</span>;
+};
+
+<span class="comment">// Testando</span>
+console.log(<span class="string">`5 + 3 = ${somar(<span class="number">5</span>, <span class="number">3</span>)}`</span>);        <span class="comment">/* 8 */</span>
+console.log(<span class="string">`10 - 4 = ${subtrair(<span class="number">10</span>, <span class="number">4</span>)}`</span>);     <span class="comment">/* 6 */</span>
+console.log(<span class="string">`6 * 7 = ${multiplicar(<span class="number">6</span>, <span class="number">7</span>)}`</span>);    <span class="comment">/* 42 */</span>
+console.log(<span class="string">`20 / 4 = ${dividir(<span class="number">20</span>, <span class="number">4</span>)}`</span>);      <span class="comment">/* 5 */</span>
+console.log(<span class="string">`10% de 200 = ${porcentagem(<span class="number">200</span>, <span class="number">10</span>)}`</span>);  <span class="comment">/* 20 */</span>
+
+<span class="comment">// Calculadora interativa</span>
+<span class="keyword">const</span> <span class="function">calculadora</span> = (a, b, operacao) => {
+    <span class="keyword">return</span> operacao(a, b);
+};
+
+<span class="keyword">const</span> resultado = calculadora(<span class="number">10</span>, <span class="number">5</span>, somar);
+console.log(resultado);  <span class="comment">/* 15 */</span></code></pre>
+                                    </div>
+                                </div>
+
+                                <h2>🎯 Resumo da Aula</h2>
+                                <div class="summary-box">
+                                    <ul class="summary-list">
+                                        <li><strong>Função</strong> = bloco de código reutilizável</li>
+                                        <li><strong>function nome() {}</strong> = função tradicional</li>
+                                        <li><strong>() => {}</strong> = arrow function (moderna)</li>
+                                        <li><strong>Parâmetros</strong> = valores que a função recebe</li>
+                                        <li><strong>return</strong> = devolve valor e para a função</li>
+                                        <li><strong>Parâmetro padrão</strong> = (x = valor)</li>
+                                        <li><strong>Return implícito</strong> = (x) => x * 2 (sem { })</li>
+                                        <li>Use <strong>arrow functions</strong> para código mais limpo!</li>
+                                    </ul>
+                                </div>
+
+                                <h2>🧠 Quiz Rápido</h2>
+                                <div class="quiz-box">
+                                    <h4>Pergunta 1:</h4>
+                                    <p>Qual a sintaxe de uma arrow function?</p>
+                                    <details>
+                                        <summary>Ver resposta</summary>
+                                        <p><strong>Resposta:</strong> <code>const nome = (param) => { }</code></p>
+                                    </details>
+                                    
+                                    <h4>Pergunta 2:</h4>
+                                    <p>O que <code>return</code> faz?</p>
+                                    <details>
+                                        <summary>Ver resposta</summary>
+                                        <p><strong>Resposta:</strong> Devolve um valor e PARALIZA a função imediatamente</p>
+                                    </details>
+
+                                    <h4>Pergunta 3:</h4>
+                                    <p>Como criar parâmetro padrão?</p>
+                                    <details>
+                                        <summary>Ver resposta</summary>
+                                        <p><strong>Resposta:</strong> <code>function nome(param = valorPadrao) {}</code></p>
+                                    </details>
+                                </div>
+
+                                <div class="next-lesson project">
+                                    <p style="text-align: center; margin-bottom: 1rem;">
+                                        🎉 <strong>Parabéns!</strong> Você completou o módulo básico de JavaScript!
+                                    </p>
+                                    <a href="../index.html" class="btn btn-primary btn-large">
+                                        ← Voltar para Início
+                                    </a>
+                                </div>
+                            </section>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 CodeAprende - Ensino de front-end gratuito</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

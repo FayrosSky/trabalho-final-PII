@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 01: O que é JavaScript? - CodeAprende</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="../index.html" class="nav-logo">⚡ CodeAprende</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="../html/index.html">HTML</a></li>
+                <li><a href="../css/index.html">CSS</a></li>
+                <li><a href="index.html" class="active">JS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="course-page">
+        <section class="course-header js">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="../index.html">Início</a> → 
+                    <a href="index.html">JavaScript</a> → 
+                    <span>Aula 01</span>
+                </div>
+                <h1>⚡ Aula 01: O que é JavaScript?</h1>
+                <p class="course-intro">
+                    Descubra o que é JavaScript, como funciona e por que é essencial 
+                    para desenvolvimento web front-end.
+                </p>
+            </div>
+        </section>
+
+        <section class="course-content">
+            <div class="container">
+                <div class="course-layout">
+                    
+                    <aside class="lessons-sidebar">
+                        <h3>📚 Conteúdo do Curso</h3>
+                        <ol class="lessons-list">
+                            <li class="lesson-item active">
+                                <a href="aula01.html" class="lesson-link">
+                                    <span class="lesson-number">01</span>
+                                    <div class="lesson-info">
+                                        <span class="lesson-title">O que é JavaScript?</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="lesson-item">
+                                <a href="aula02.html" class="lesson-link">
+                                    <span class="lesson-number">02</span>
+                                    <div class="lesson-info">
+                                        <span class="lesson-title">Variáveis</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="lesson-item">
+                                <a href="aula03.html" class="lesson-link">
+                                    <span class="lesson-number">03</span>
+                                    <div class="lesson-info">
+                                        <span class="lesson-title">Funções</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ol>
+                    </aside>
+
+                    <div class="main-content">
+                        <article class="lesson-content">
+                            <header class="lesson-header">
+                                <span class="lesson-badge">Aula 01</span>
+                                <h2>O que você vai aprender</h2>
+                            </header>
+
+                            <section class="lesson-body">
+                                <ul class="learning-objectives">
+                                    <li>✅ O que é JavaScript e para que serve</li>
+                                    <li>✅ Diferença entre HTML, CSS e JavaScript</li>
+                                    <li>✅ Como adicionar JavaScript à página</li>
+                                    <li>✅ Seu primeiro código JavaScript</li>
+                                </ul>
+
+                                <h2>📖 O que é JavaScript?</h2>
+                                <p>
+                                    <strong>JavaScript</strong> (JS) é uma linguagem de programação que torna 
+                                    sites <strong>interativos</strong> e dinâmicos. É uma das três tecnologias 
+                                    fundamentais da web, junto com HTML e CSS.
+                                </p>
+
+                                <div class="info-box">
+                                    <h3>💡 Analogia: HTML + CSS + JavaScript = Casa Inteligente</h3>
+                                    <ul>
+                                        <li><strong>HTML</strong> = Estrutura (paredes, portas)</li>
+                                        <li><strong>CSS</strong> = Decoração (pintura, estilo)</li>
+                                        <li><strong>JavaScript</strong> = Funcionalidades (luzes, portão automático)</li>
+                                    </ul>
+                                </div>
+
+                                <h2>🎯 O que JavaScript pode fazer?</h2>
+                                <ul class="summary-list">
+                                    <li>🖱️ Responder a cliques e eventos</li>
+                                    <li>🔄 Atualizar conteúdo sem recarregar</li>
+                                    <li>📡 Conversar com servidor (APIs)</li>
+                                    <li>🎬 Criar animações</li>
+                                    <li>✅ Validar formulários</li>
+                                    <li>🍪 Armazenar dados (LocalStorage)</li>
+                                </ul>
+
+                                <h2>📝 3 Formas de Adicionar JavaScript</h2>
+
+                                <h3>1. JavaScript Inline (NÃO USE)</h3>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">inline.html</span>
+                                    </div>
+                                    <pre><code><span class="tag">&lt;button</span> <span class="attr">onclick</span>=<span class="string">"alert('Olá!')"</span><span class="tag">&gt;</span>Clique<span class="tag">&lt;/button&gt;</span></code></pre>
+                                </div>
+
+                                <h3>2. JavaScript Interno (para testes)</h3>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">interno.html</span>
+                                    </div>
+                                    <pre><code><span class="tag">&lt;script&gt;</span>
+    alert("Olá, Mundo!");
+<span class="tag">&lt;/script&gt;</span></code></pre>
+                                </div>
+
+                                <h3>3. JavaScript Externo (MELHOR OPÇÃO) ✅</h3>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">externo.html</span>
+                                    </div>
+                                    <pre><code><span class="comment">&lt;!-- NO HTML --&gt;</span>
+<span class="tag">&lt;script</span> <span class="attr">src</span>=<span class="string">"script.js"</span><span class="tag">&gt;&lt;/script&gt;</span>
+
+<span class="comment">&lt;!-- NO ARQUIVO script.js --&gt;</span>
+alert("Olá, Mundo!");</code></pre>
+                                </div>
+
+                                <h2>✍️ Exercício Prático: Seu Primeiro JavaScript</h2>
+                                <div class="exercise-box">
+                                    <h4>📝 Criando um arquivo JS</h4>
+                                    <ol>
+                                        <li>Crie um arquivo <code>index.html</code></li>
+                                        <li>Crie um arquivo <code>script.js</code> na mesma pasta</li>
+                                        <li>Conecte eles no HTML</li>
+                                    </ol>
+                                    <div class="code-example">
+                                        <pre><code><span class="comment">&lt;!-- index.html --&gt;</span>
+<span class="tag">&lt;!DOCTYPE</span> <span class="attr">html</span><span class="tag">&gt;</span>
+<span class="tag">&lt;html</span><span class="tag">&gt;</span>
+<span class="tag">&lt;body&gt;</span>
+    <span class="tag">&lt;h1</span> <span class="attr">id</span>=<span class="string">"titulo"</span><span class="tag">&gt;</span>Olá!<span class="tag">&lt;/h1&gt;</span>
+    <span class="tag">&lt;button</span> <span class="attr">id</span>=<span class="string">"botao"</span><span class="tag">&gt;</span>Clique<span class="tag">&lt;/button&gt;</span>
+    
+    <span class="tag">&lt;script</span> <span class="attr">src</span>=<span class="string">"script.js"</span><span class="tag">&gt;&lt;/script&gt;</span>
+<span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span></code></pre>
+                                    </div>
+                                    <div class="code-example">
+                                        <pre><code><span class="comment">// script.js</span>
+<span class="keyword">const</span> botao = document.getElementById(<span class="string">"botao"</span>);
+
+botao.addEventListener(<span class="string">"click"</span>, <span class="keyword">function</span>() {
+    alert(<span class="string">"Botão clicado!"</span>);
+    document.getElementById(<span class="string">"titulo"</span>).innerText = <span class="string">"Clicou!!!"</span>;
+    document.getElementById(<span class="string">"titulo"</span>).style.color = <span class="string">"red"</span>;
+});</code></pre>
+                                    </div>
+                                </div>
+
+                                <h2>🎯 Resumo da Aula</h2>
+                                <div class="summary-box">
+                                    <ul class="summary-list">
+                                        <li>JavaScript = linguagem de programação interativa</li>
+                                        <li>HTML = estrutura, CSS = estilo, JS = interatividade</li>
+                                        <li>Use <strong>arquivo .js externo</strong></li>
+                                        <li><code>console.log()</code> para depurar</li>
+                                        <li><code>document.getElementById()</code> para selecionar</li>
+                                        <li><code>addEventListener()</code> para eventos</li>
+                                    </ul>
+                                </div>
+
+                                <div class="next-lesson">
+                                    <a href="aula02.html" class="btn btn-primary btn-large">
+                                        Próxima Aula: Variáveis →
+                                    </a>
+                                </div>
+                            </section>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 CodeAprende - Ensino de front-end gratuito</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

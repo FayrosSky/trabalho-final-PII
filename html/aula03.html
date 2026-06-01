@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 03: Formulários - CodeAprende</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="../index.html" class="nav-logo">⚡ CodeAprende</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="index.html" class="active">HTML</a></li>
+                <li><a href="../css/index.html">CSS</a></li>
+                <li><a href="../javascript/index.html">JS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="course-page">
+        <section class="course-header html">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="../index.html">Início</a> → 
+                    <a href="index.html">HTML5</a> → 
+                    <span>Aula 03</span>
+                </div>
+                <h1>📝 Aula 03: Formulários HTML</h1>
+                <p class="course-intro">
+                    Aprenda a criar formulários para coletar dados: inputs, botões, 
+                    validation e muito mais.
+                </p>
+            </div>
+        </section>
+
+        <section class="course-content">
+            <div class="container">
+                <div class="course-layout">
+                    
+                    <aside class="lessons-sidebar">
+                        <h3>📚 Conteúdo do Curso</h3>
+                        <ol class="lessons-list">
+                            <li class="lesson-item">
+                                <a href="aula01.html" class="lesson-link">
+                                    <span class="lesson-number">01</span>
+                                    <div class="lesson-info">
+                                        <span class="lesson-title">O que é HTML?</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="lesson-item">
+                                <a href="aula02.html" class="lesson-link">
+                                    <span class="lesson-number">02</span>
+                                    <div class="lesson-info">
+                                        <span class="lesson-title">Tags básicas</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="lesson-item active">
+                                <a href="aula03.html" class="lesson-link">
+                                    <span class="lesson-number">03</span>
+                                    <div class="lesson-info">
+                                        <span class="lesson-title">Formulários</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ol>
+                    </aside>
+
+                    <div class="main-content">
+                        <article class="lesson-content">
+                            <header class="lesson-header">
+                                <span class="lesson-badge">Aula 03</span>
+                                <h2>Formulários HTML5</h2>
+                            </header>
+
+                            <section class="lesson-body">
+                                <h2>📖 O que são Formulários?</h2>
+                                <p>
+                                    <strong>Formulários</strong> são usados para coletar dados do usuário: 
+                                    login, cadastro, contato, pesquisa e muito mais [web:1].
+                                </p>
+
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">formulario-basico.html</span>
+                                    </div>
+                                    <pre><code><span class="tag">&lt;form</span> <span class="attr">action</span>=<span class="string">"/enviar.php"</span> <span class="attr">method</span>=<span class="string">"POST"</span><span class="tag">&gt;</span>
+    
+    <span class="comment">&lt;!-- Campos do formulário --&gt;</span>
+    <span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"nome"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="string">"email"</span> <span class="attr">name</span>=<span class="string">"email"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;button</span><span class="tag"&gt;</span>Enviar<span class="tag">&lt;/button&gt;</span>
+    
+<span class="tag">&lt;/form&gt;</span></code></pre>
+                                </div>
+
+                                <h2>🎯 1. A Tag &lt;form&gt;</h2>
+                                <p>A tag <code>&lt;form&gt;</code> envolve todos os campos do formulário:</p>
+
+                                <table class="explanation-table">
+                                    <tr>
+                                        <th>Atributo</th>
+                                        <th>Descrição</th>
+                                    </tr>
+                                    <tr>
+                                        <td><code>action</code></td>
+                                        <td>URL para onde os dados serão enviados</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>method</code></td>
+                                        <td><code>GET</code> (URL) ou <code>POST</code> (corpo da requisição)</td>
+                                    </tr>
+                                </table>
+
+                                <div class="info-box">
+                                    <h3>📌 GET vs POST</h3>
+                                    <ul>
+                                        <li><strong>GET:</strong> Dados visíveis na URL (não use para senhas!)</li>
+                                        <li><strong>POST:</strong> Dados ocultos no corpo da requisição (mais seguro)</li>
+                                    </ul>
+                                </div>
+
+                                <h2>✏️ 2. Input - O Campo Mais Versátil</h2>
+                                <p>O <code>&lt;input&gt;</code> tem vários tipos diferentes:</p>
+
+                                <h3>Tipos de Input:</h3>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">tipos-input.html</span>
+                                    </div>
+                                    <pre><code><span class="comment">&lt;!-- Texto comum --&gt;</span>
+<span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">placeholder</span>=<span class="string">"Seu nome"</span><span class="tag">&gt;</span>
+
+<span class="comment">&lt;!-- E-mail (valida automaticamente) --&gt;</span>
+<span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="string">"email"</span> <span class="attr">placeholder</span>=<span class="string">"email@exemplo.com"</span><span class="tag">&gt;</span>
+
+<span class="comment">&lt;!-- Senha (esconde caracteres) --&gt;</span>
+<span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">placeholder</span>=<span class="string">"******"</span><span class="tag">&gt;</span>
+
+<span class="comment">&lt!-- Número --&gt;</span>
+<span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="string">"number"</span> <span class="attr">min</span>=<span class="string">"0"</span> <span class="attr">max</span>=<span class="string">"100"</span><span class="tag">&gt;</span>
+
+<span class="comment">&lt;!-- Botão de rádio (seleção única) --&gt;</span>
+<span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"genero"</span><span class="tag">&gt;</span> Masculino
+<span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"genero"</span><span class="tag">&gt;</span> Feminino
+
+<span class="comment">&lt;!-- Checkbox (múltiplas opções) --&gt;</span>
+<span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span><span class="tag">&gt;</span> Aceito os termos
+
+<span class="comment">&lt;!-- Data --&gt;</span>
+<span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="string">"date"</span><span class="tag">&gt;</span>
+
+<span class="comment">&lt;!-- Telefone --&gt;</span>
+<span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="string">"tel"</span> <span class="attr">placeholder</span>=<span class="string">"(11) 99999-9999"</span><span class="tag">&gt;</span>
+
+<span class="comment">&lt;!-- Botão de envio --&gt;</span>
+<span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"Enviar"</span><span class="tag">&gt;</span></code></pre>
+                                </div>
+
+                                <h2>🏷️ 3. Atributos Importantes do Input</h2>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">atributos-input.html</span>
+                                    </div>
+                                    <pre><code><span class="tag">&lt;input</span> 
+    <span class="attr">type</span>=<span class="string">"text"</span>
+    <span class="attr">name</span>=<span class="string">"nome"</span>           <span class="comment">&lt;!-- Nome do campo (enviado ao servidor) --&gt;</span>
+    <span class="attr">id</span>=<span class="string">"nome"</span>             <span class="comment">&lt;!-- ID único (para label) --&gt;</span>
+    <span class="attr">placeholder</span>=<span class="string">"Digite seu nome"</span>  <span class="comment">&lt;!-- Texto de exemplo --&gt;</span>
+    <span class="attr">required</span>              <span class="comment">&lt;!-- Campo obrigatório --&gt;</span>
+    <span class="attr">maxlength</span>=<span class="string">"50"</span>        <span class="comment">&lt;!-- Máximo de caracteres --&gt;</span>
+    <span class="attr">value</span>=<span class="string">"valor inicial"</span> <span class="comment">&lt;!-- Valor padrão --&gt;</span>
+<span class="tag">&gt;</span></code></pre>
+                                </div>
+
+                                <h2>📋 4. Label - Rótulo do Campo</h2>
+                                <p>O <code>&lt;label&gt;</code> dá um nome ao campo (importante para acessibilidade):</p>
+
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">label.html</span>
+                                    </div>
+                                    <pre><code><span class="comment">&lt;!-- Melhor prática: vincular com 'for' e 'id' --&gt;</span>
+<span class="tag">&lt;label</span> <span class="attr">for</span>=<span class="string">"email"</span><span class="tag">&gt;</span>E-mail:<span class="tag">&lt;/label&gt;</span>
+<span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="string">"email"</span> <span class="attr">id</span>=<span class="string">"email"</span> <span class="attr">name</span>=<span class="string">"email"</span><span class="tag">&gt;</span>
+
+<span class="comment">&lt;!-- Alternativa: envolver o input --&gt;</span>
+<span class="tag">&lt;label&gt;</span>
+    Nome:
+    <span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"nome"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;/label&gt;</span></code></pre>
+                                </div>
+
+                                <h2>💬 5. Textarea - Campo de Texto Múltiplas Linhas</h2>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">textarea.html</span>
+                                    </div>
+                                    <pre><code><span class="tag">&lt;label</span> <span class="attr">for</span>=<span class="string">"mensagem"</span><span class="tag">&gt;</span>Mensagem:<span class="tag">&lt;/label&gt;</span>
+<span class="tag">&lt;textarea</span> 
+    <span class="attr">id</span>=<span class="string">"mensagem"</span>
+    <span class="attr">name</span>=<span class="string">"mensagem"</span>
+    <span class="attr">rows</span>=<span class="string">"5"</span>           <span class="comment">&lt;!-- Número de linhas --&gt;</span>
+    <span class="attr">placeholder</span>=<span class="string">"Digite sua mensagem..."</span>
+    <span class="attr">required</span>
+<span class="tag">&gt;&lt;/textarea&gt;</span></code></pre>
+                                </div>
+
+                                <h2>📝 6. Select - Menu Suspenso (Dropdown)</h2>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">select.html</span>
+                                    </div>
+                                    <pre><code><span class="tag">&lt;label</span> <span class="attr">for</span>=<span class="string">"cidade"</span><span class="tag">&gt;</span>Cidade:<span class="tag">&lt;/label&gt;</span>
+<span class="tag">&lt;select</span> <span class="attr">id</span>=<span class="string">"cidade"</span> <span class="attr">name</span>=<span class="string">"cidade"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;option</span><span class="tag">&gt;</span>Selecione uma cidade<span class="tag">&lt;/option&gt;</span>
+    <span class="tag">&lt;option</span> <span class="attr">value</span>=<span class="string">"sp"</span><span class="tag">&gt;</span>São Paulo<span class="tag">&lt;/option&gt;</span>
+    <span class="tag">&lt;option</span> <span class="attr">value</span>=<span class="string">"rj"</span><span class="tag">&gt;</span>Rio de Janeiro<span class="tag">&lt;/option&gt;</span>
+    <span class="tag">&lt;option</span> <span class="attr">value</span>=<span class="string">"bh"</span> <span class="attr">selected</span><span class="tag">&gt;</span>Belo Horizonte<span class="tag">&lt;/option&gt;</span>
+<span class="tag">&lt;/select&gt;</span></code></pre>
+                                </div>
+
+                                <h2>🔘 7. Button - Botões</h2>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">botoes.html</span>
+                                    </div>
+                                    <pre><code><span class="comment">&lt;!-- Botão de envio (padrão do form) --&gt;</span>
+<span class="tag">&lt;button</span> <span class="attr">type</span>=<span class="string">"submit"</span><span class="tag">&gt;</span>Enviar<span class="tag">&lt;/button&gt;</span>
+
+<span class="comment">&lt;!-- Botão de reset (limpa o form) --&gt;</span>
+<span class="tag">&lt;button</span> <span class="attr">type</span>=<span class="string">"reset"</span><span class="tag">&gt;</span>Limpar<span class="tag">&lt;/button&gt;</span>
+
+<span class="comment">&lt;!-- Botão comum (para JavaScript) --&gt;</span>
+<span class="tag">&lt;button</span> <span class="attr">type</span>=<span class="string">"button"</span><span class="tag">&gt;</span>Clique Mim<span class="tag">&lt;/button&gt;</span></code></pre>
+                                </div>
+
+                                <h2>✅ 8. Validação de Formulário</h2>
+                                <p>HTML5 tem validação nativa!</p>
+
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">validacao.html</span>
+                                    </div>
+                                    <pre><code><span class="comment">&lt;!-- Campo obrigatório --&gt;</span>
+<span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">required</span><span class="tag">&gt;</span>
+
+<span class="comment">&lt;!-- E-mail válido --&gt;</span>
+<span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="string">"email"</span> <span class="attr">required</span><span class="tag">&gt;</span>
+
+<span class="comment">&lt;!-- Número entre 0 e 100 --&gt;</span>
+<span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="string">"number"</span> <span class="attr">min</span>=<span class="string">"0"</span> <span class="attr">max</span>=<span class="string">"100"</span><span class="tag">&gt;</span>
+
+<span class="comment">&lt;!-- Mínimo e máximo de caracteres --&gt;</span>
+<span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">minlength</span>=<span class="string">"3"</span> <span class="attr">maxlength</span>=<span class="string">"20"</span><span class="tag">&gt;</span>
+
+<span class="comment">&lt;!-- Expressão regular (padrão) --&gt;</span>
+<span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">pattern</span>=<span class="string">"[A-Za-z]{3}"</span><span class="tag">&gt;</span>
+
+<span class="comment">&lt;!-- Campo com valor padrão --&gt;</span>
+<span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">value</span>=<span class="string">"valor inicial"</span><span class="tag">&gt;</span></code></pre>
+                                </div>
+
+                                <h2>✍️ Exercício Prático: Formulário de Contato</h2>
+                                <div class="exercise-box">
+                                    <h4>📝 Criando um Formulário Completo</h4>
+                                    <p>Crie um arquivo <code>contato.html</code> com:</p>
+                                    <ol>
+                                        <li>Um <code>&lt;form&gt;</code> com method="POST"</li>
+                                        <li>Input tipo <code>text</code> para nome (com required)</li>
+                                        <li>Input tipo <code>email</code> para e-mail (com required)</li>
+                                        <li>Input tipo <code>tel</code> para telefone</li>
+                                        <li>Textarea para mensagem (5 linhas, required)</li>
+                                        <li>Select para assunto (3 opções)</li>
+                                        <li>Checkbox para "Aceito receber novidades"</li>
+                                        <li>Botão de envio</li>
+                                    </ol>
+                                </div>
+
+                                <h2>📝 Código Completo do Formulário</h2>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">formulario-contato.html</span>
+                                    </div>
+                                    <pre><code><span class="tag">&lt;!DOCTYPE</span> <span class="attr">html</span><span class="tag">&gt;</span>
+<span class="tag">&lt;html</span> <span class="attr">lang</span>=<span class="string">"pt-BR"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;head&gt;</span>
+    <span class="tag">&lt;meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;title&gt;</span>Formulário de Contato<span class="tag">&lt;/title&gt;</span>
+<span class="tag">&lt;/head&gt;</span>
+<span class="tag">&lt;body&gt;</span>
+    <span class="tag">&lt;h1&gt;</span>Fale Conosco<span class="tag">&lt;/h1&gt;</span>
+    
+    <span class="tag">&lt;form</span> <span class="attr">action</span>=<span class="string">"/enviar"</span> <span class="attr">method</span>=<span class="string">"POST"</span><span class="tag">&gt;</span>
+        
+        <span class="comment">&lt;!-- Nome --&gt;</span>
+        <span class="tag">&lt;label</span> <span class="attr">for</span>=<span class="string">"nome"</span><span class="tag">&gt;</span>Nome:<span class="tag">&lt;/label&gt;</span>
+        <span class="tag">&lt;input</span> 
+            <span class="attr">type</span>=<span class="string">"text"</span> 
+            <span class="attr">id</span>=<span class="string">"nome"</span> 
+            <span class="attr">name</span>=<span class="string">"nome"</span>
+            <span class="attr">required</span>
+            <span class="attr">placeholder</span>=<span class="string">"Seu nome completo"</span>
+        <span class="tag">&gt;</span>
+        
+        <span class="comment">&lt;!-- E-mail --&gt;</span>
+        <span class="tag">&lt;label</span> <span class="attr">for</span>=<span class="string">"email"</span><span class="tag">&gt;</span>E-mail:<span class="tag">&lt;/label&gt;</span>
+        <span class="tag">&lt;input</span> 
+            <span class="attr">type</span>=<span class="string">"email"</span> 
+            <span class="attr">id</span>=<span class="string">"email"</span> 
+            <span class="attr">name</span>=<span class="string">"email"</span>
+            <span class="attr">required</span>
+            <span class="attr">placeholder</span>=<span class="string">"seu@email.com"</span>
+        <span class="tag">&gt;</span>
+        
+        <span class="comment">&lt;!-- Telefone --&gt;</span>
+        <span class="tag">&lt;label</span> <span class="attr">for</span>=<span class="string">"telefone"</span><span class="tag">&gt;</span>Telefone:<span class="tag">&lt;/label&gt;</span>
+        <span class="tag">&lt;input</span> 
+            <span class="attr">type</span>=<span class="string">"tel"</span> 
+            <span class="attr">id</span>=<span class="string">"telefone"</span> 
+            <span class="attr">name</span>=<span class="string">"telefone"</span>
+            <span class="attr">placeholder</span>=<span class="string">"(11) 99999-9999"</span>
+        <span class="tag">&gt;</span>
+        
+        <span class="comment">&lt;!-- Assunto --&gt;</span>
+        <span class="tag">&lt;label</span> <span class="attr">for</span>=<span class="string">"assunto"</span><span class="tag">&gt;</span>Assunto:<span class="tag">&lt;/label&gt;</span>
+        <span class="tag">&lt;select</span> <span class="attr">id</span>=<span class="string">"assunto"</span> <span class="attr">name</span>=<span class="string">"assunto"</span><span class="tag"&gt;</span>
+            <span class="tag">&lt;option</span><span class="tag">&gt;</span>Selecione um assunto<span class="tag">&lt;/option&gt;</span>
+            <span class="tag">&lt;option</span> <span class="attr">value</span>=<span class="string">"dúvida"</span><span class="tag">&gt;</span>Dúvida<span class="tag">&lt;/option&gt;</span>
+            <span class="tag">&lt;option</span> <span class="attr">value</span>=<span class="string">"sugestao"</span><span class="tag">&gt;</span>Sugestão<span class="tag">&lt;/option&gt;</span>
+            <span class="tag">&lt;option</span> <span class="attr">value</span>=<span class="string">"reclamac"ao</span><span class="tag">&gt;</span>Reclamação<span class="tag">&lt;/option&gt;</span>
+        <span class="tag">&lt;/select&gt;</span>
+        
+        <span class="comment">&lt;!-- Mensagem --&gt;</span>
+        <span class="tag">&lt;label</span> <span class="attr">for</span>=<span class="string">"mensagem"</span><span class="tag">&gt;</span>Mensagem:<span class="tag">&lt;/label&gt;</span>
+        <span class="tag">&lt;textarea</span> 
+            <span class="attr">id</span>=<span class="string">"mensagem"</span> 
+            <span class="attr">name</span>=<span class="string">"mensagem"</span>
+            <span class="attr">rows</span>=<span class="string">"5"</span>
+            <span class="attr">required</span>
+            <span class="attr">placeholder</span>=<span class="string">"Sua mensagem..."</span>
+        <span class="tag">&gt;&lt;/textarea&gt;</span>
+        
+        <span class="comment">&lt;!-- Checkbox --&gt;</span>
+        <span class="tag">&lt;label&gt;</span>
+            <span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"news"</span><span class="tag">&gt;</span>
+            Quero receber novidades por e-mail
+        <span class="tag">&lt;/label&gt;</span>
+        
+        <span class="comment">&lt;!-- Botão --&gt;</span>
+        <span class="tag">&lt;button</span> <span class="attr">type</span>=<span class="string">"submit"</span><span class="tag">&gt;</span>Enviar Mensagem<span class="tag">&lt;/button&gt;</span>
+        
+    <span class="tag">&lt;/form&gt;</span>
+<span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span></code></pre>
+                                </div>
+
+                                <h2>🎯 Resumo da Aula</h2>
+                                <div class="summary-box">
+                                    <h4>Tópicos Aprendidos:</h4>
+                                    <ul class="summary-list">
+                                        <li><code>&lt;form&gt;</code> - Envolve todo formulário</li>
+                                        <li><code>&lt;input&gt;</code> - Campo versátil (text, email, password, number, radio, checkbox...)</li>
+                                        <li><code>&lt;label&gt;</code> - Rótulo do campo (acessibilidade)</li>
+                                        <li><code>&lt;textarea&gt;</code> - Texto múltiplas linhas</li>
+                                        <li><code>&lt;select&gt;</code> + <code>&lt;option&gt;</code> - Menu suspenso</li>
+                                        <li><code>&lt;button&gt;</code> - Botões</li>
+                                        <li>Atributos: <code>required</code>, <code>placeholder</code>, <code>min</code>, <code>max</code>, <code>pattern</code></li>
+                                        <li>Valores: <code>GET</code> vs <code>POST</code></li>
+                                    </ul>
+                                </div>
+
+                                <div class="next-lesson project">
+                                    <a href="projeto.html" class="btn btn-primary btn-large">
+                                        🏆 Projeto Final HTML →
+                                    </a>
+                                </div>
+                            </section>
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 CodeAprende - Ensino de front-end gratuito</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

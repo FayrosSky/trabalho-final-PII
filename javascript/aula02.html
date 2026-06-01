@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 02: Variáveis - CodeAprende</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="../index.html" class="nav-logo">⚡ CodeAprende</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="../html/index.html">HTML</a></li>
+                <li><a href="../css/index.html">CSS</a></li>
+                <li><a href="index.html" class="active">JS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="course-page">
+        <section class="course-header js">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="../index.html">Início</a> → 
+                    <a href="index.html">JavaScript</a> → 
+                    <span>Aula 02</span>
+                </div>
+                <h1>⚡ Aula 02: Variáveis e Tipos de Dados</h1>
+                <p class="course-intro">
+                    Aprenda a declarar variáveis com let e const, tipos de dados e operadores em JavaScript.
+                </p>
+            </div>
+        </section>
+
+        <section class="course-content">
+            <div class="container">
+                <div class="course-layout">
+                    
+                    <aside class="lessons-sidebar">
+                        <h3>📚 Conteúdo do Curso</h3>
+                        <ol class="lessons-list">
+                            <li class="lesson-item">
+                                <a href="aula01.html" class="lesson-link">
+                                    <span class="lesson-number">01</span>
+                                    <div class="lesson-info">
+                                        <span class="lesson-title">O que é JS?</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="lesson-item active">
+                                <a href="aula02.html" class="lesson-link">
+                                    <span class="lesson-number">02</span>
+                                    <div class="lesson-info">
+                                        <span class="lesson-title">Variáveis</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="lesson-item">
+                                <a href="aula03.html" class="lesson-link">
+                                    <span class="lesson-number">03</span>
+                                    <div class="lesson-info">
+                                        <span class="lesson-title">Funções</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ol>
+                    </aside>
+
+                    <div class="main-content">
+                        <article class="lesson-content">
+                            <header class="lesson-header">
+                                <span class="lesson-badge">Aula 02</span>
+                                <h2>Variáveis e Tipos de Dados</h2>
+                            </header>
+
+                            <section class="lesson-body">
+                                <h2>📖 O que é uma Variável?</h2>
+                                <p>
+                                    <strong>Variável</strong> é um "recipiente" que armazena dados na memória do computador. 
+                                    Você pode guardar números, textos, e outros valores.
+                                </p>
+
+                                <div class="info-box">
+                                    <h3>💡 Analogia: Variável = Caixa com Etiqueta</h3>
+                                    <p>
+                                        Imagine uma caixa com um rótulo. Dentro da caixa tem um valor, 
+                                        e você acessa o valor pelo nome da caixa (variável).
+                                    </p>
+                                </div>
+
+                                <h2>🎯 3 Formas de Declarar Variáveis</h2>
+
+                                <h3>1. var (ANTIGO - NÃO USE)</h3>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">var-antigo.js</span>
+                                    </div>
+                                    <pre><code><span class="keyword">var</span> nome = <span class="string">"Davyd"</span>; <span class="comment">/* antigo, não use mais */</span></code></pre>
+                                </div>
+
+                                <h3>2. let (variável que MUDA) ✅</h3>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">let.js</span>
+                                    </div>
+                                    <pre><code><span class="keyword">let</span> idade = <span class="number">17</span>;
+idade = <span class="number">18</span>;  <span class="comment">/* pode mudar o valor */</span>
+
+console.log(idade);  <span class="comment">/* 18 */</span></code></pre>
+                                </div>
+                                <div class="info-box">
+                                    <p>✅ Use <strong>let</strong> quando o valor for mudar no futuro.</p>
+                                </div>
+
+                                <h3>3. const (constante que NÃO MUDA) ✅ RECOMENDADO</h3>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">const.js</span>
+                                    </div>
+                                    <pre><code><span class="keyword">const</span> pi = <span class="number">3.14159</span>;
+pi = <span class="number">3.14</span>;  <span class="comment">/* ERRO! Não pode mudar const */</span>
+
+<span class="keyword">const</span> nome = <span class="string">"CodeAprende"</span>;
+console.log(nome);  <span class="comment">/* CodeAprende */</span></code></pre>
+                                </div>
+                                <div class="info-box">
+                                    <p>✅ Use <strong>const</strong> por padrão! Só use <code>let</strong> se precisar mudar o valor.</p>
+                                </div>
+
+                                <h2>📊 Tipos de Dados em JavaScript</h2>
+
+                                <h3>1. String (texto)</h3>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">string.js</span>
+                                    </div>
+                                    <pre><code><span class="keyword">const</span> nome = <span class="string">"Davyd"</span>;
+<span class="keyword">const</span> frase = <span class="string">'Olá, mundo!'</span>;
+<span class="keyword">const</span> texto = <span class="string">`Template string`</span>;
+
+console.log(<span class="string">"Nome: "</span> + nome);  <span class="comment">/* concatenação */</span>
+console.log(<span class="string">`Nome: ${nome}`</span>);  <span class="comment">/* template string (melhor!) */</span></code></pre>
+                                </div>
+
+                                <h3>2. Number (número)</h3>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">number.js</span>
+                                    </div>
+                                    <pre><code><span class="keyword">const</span> idade = <span class="number">17</span>;           <span class="comment">/* inteiro */</span>
+<span class="keyword">const</span> preco = <span class="number">9.99</span>;       <span class="comment">/* decimal */</span>
+<span class="keyword">const</span> negativo = <span class="number">-5</span>;
+
+console.log(idade + <span class="number">3</span>);   <span class="comment">/* 20 */</span>
+console.log(preco * <span class="number">2</span>);   <span class="comment">/* 19.98 */</span></code></pre>
+                                </div>
+
+                                <h3>3. Boolean (verdadeiro/falso)</h3>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">boolean.js</span>
+                                    </div>
+                                    <pre><code><span class="keyword">const</span> estáLogado = <span class="keyword">true</span>;
+<span class="keyword">const</span> éAdulto = <span class="keyword">false</span>;
+<span class="keyword">const</span> maiorIdade = idade >= <span class="number">18</span>;  <span class="comment">/* false */</span></code></pre>
+                                </div>
+
+                                <h3>4. Undefined (não definido)</h3>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">undefined.js</span>
+                                    </div>
+                                    <pre><code><span class="keyword">let</span> variavel;
+console.log(variavel);  <span class="comment">/* undefined */</span>
+
+<span class="keyword">const</span> nome = <span class="string">"Davyd"</span>;
+nome = <span class="keyword">undefined</span>;  <span class="comment">/* ERRO! Não pode mudar const */</span></code></pre>
+                                </div>
+
+                                <h3>5. Null (vazio/intencional)</h3>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">null.js</span>
+                                    </div>
+                                    <pre><code><span class="keyword">const</span> usuario = <span class="keyword">null</span>;  <span class="comment">/* usuário não existe */</span>
+
+<span class="keyword">if</span> (usuario === <span class="keyword">null</span>) {
+    console.log(<span class="string">"Nenhum usuário selecionado"</span>);
+}</code></pre>
+                                </div>
+
+                                <table class="explanation-table">
+                                    <tr>
+                                        <th>Tipo</th>
+                                        <th>Exemplo</th>
+                                        <th>Descrição</th>
+                                    </tr>
+                                    <tr>
+                                        <td><code>String</code></td>
+                                        <td><code>"texto"</code></td>
+                                        <td>Texto entre aspas</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>Number</code></td>
+                                        <td><code>42</code>, <code>3.14</code></td>
+                                        <td>Números (inteiro ou decimal)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>Boolean</code></td>
+                                        <td><code>true</code>, <code>false</code></td>
+                                        <td>Verdadeiro ou falso</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>Undefined</code></td>
+                                        <td><code>let x;</code></td>
+                                        <td>Declaramento sem valor</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>Null</code></td>
+                                        <td><code>null</code></td>
+                                        <td>Valor vazio intencional</td>
+                                    </tr>
+                                </table>
+
+                                <h2>🎯 Operadores em JavaScript</h2>
+
+                                <h3>Operadores Matemáticos</h3>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">operadores-matematicos.js</span>
+                                    </div>
+                                    <pre><code><span class="keyword">let</span> a = <span class="number">10</span>;
+<span class="keyword">let</span> b = <span class="number">3</span>;
+
+console.log(a + b);   <span class="comment">/* 13 - adição */</span>
+console.log(a - b);   <span class="comment">/* 7 - subtração */</span>
+console.log(a * b);   <span class="comment">/* 30 - multiplicação */</span>
+console.log(a / b);   <span class="comment">/* 3.33 - divisão */</span>
+console.log(a % b);   <span class="comment">/* 1 - resto da divisão */</span>
+console.log(a ** b);  <span class="comment">/* 1000 - potência */</span></code></pre>
+                                </div>
+
+                                <h3>Operadores de Comparação</h3>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">operadores-comparacao.js</span>
+                                    </div>
+                                    <pre><code><span class="keyword">const</span> a = <span class="number">5</span>;
+<span class="keyword">const</span> b = <span class="string">"5"</span>;
+
+console.log(a == b);   <span class="comment">/* true - igual (valor) */</span>
+console.log(a === b);  <span class="comment">/* false - estrito (valor e tipo) */</span>
+console.log(a != b);   <span class="comment">/* false - diferente */</span>
+console.log(a !== b);  <span class="comment">/* true - estritamente diferente */</span>
+console.log(a > b);    <span class="comment">/* false - maior */</span>
+console.log(a < b);    <span class="comment">/* false - menor */</span>
+console.log(a >= b);   <span class="comment">/* true - maior ou igual */</span></code></pre>
+                                </div>
+
+                                <div class="info-box">
+                                    <h3>⚠️ == vs ===</h3>
+                                    <p>
+                                        Sempre use <strong>===</strong> (estrito)! <code>==</code> faz conversão automática de tipo, 
+                                        o que pode causar bugs.
+                                    </p>
+                                </div>
+
+                                <h3>Operadores Lógicos</h3>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">operadores-logicos.js</span>
+                                    </div>
+                                    <pre><code><span class="keyword">const</span> a = <span class="keyword">true</span>;
+<span class="keyword">const</span> b = <span class="keyword">false</span>;
+
+console.log(a && b);   <span class="comment">/* false - AND (e) */</span>
+console.log(a || b);   <span class="comment">/* true - OR (ou) */</span>
+console.log(!a);       <span class="comment">/* false - NOT (negação) */</span>
+
+<span class="comment">// Usando em condições</span>
+<span class="keyword">const</span> idade = <span class="number">20</span>;
+<span class="keyword">const</span> temPrivilegio = idade >= <span class="number">18</span> && <span class="keyword">true</span>;
+console.log(temPrivilegio);  <span class="comment">/* true */</span></code></pre>
+                                </div>
+
+                                <h2>✍️ Exercício Prático: Calculadora de IMC</h2>
+                                <div class="exercise-box">
+                                    <h4>📝 Criando uma calculadora simples</h4>
+                                    <div class="code-example">
+                                        <pre><code><span class="comment">// Calculadora de IMC (Índice de Massa Corporal)</span>
+
+<span class="keyword">const</span> peso = <span class="number">70</span>;  <span class="comment">// em kg</span>
+<span class="keyword">const</span> altura = <span class="number">1.75</span>;  <span class="comment">// em metros</span>
+
+<span class="comment">// Fórmula: IMC = peso / (altura * altura)</span>
+<span class="keyword">const</span> imc = peso / (altura * altura);
+
+console.log(<span class="string">`IMC: ${imc.toFixed(<span class="number">2</span>)} `</span>);  <span class="comment">/* 22.86 */</span>
+
+<span class="comment">// Verificar categoria</span>
+<span class="keyword">let</span> categoria;
+
+<span class="keyword">if</span> (imc < <span class="number">18.5</span>) {
+    categoria = <span class="string">"Abaixo do peso"</span>;
+} <span class="keyword">else if</span> (imc < <span class="number">25</span>) {
+    categoria = <span class="string">"Peso normal"</span>;
+} <span class="keyword">else if</span> (imc < <span class="number">30</span>) {
+    categoria = <span class="string">"Sobrepeso"</span>;
+} <span class="keyword">else</span> {
+    categoria = <span class="string">"Obesidade"</span>;
+}
+
+console.log(<span class="string">`Categoria: ${categoria}`</span>);  <span class="comment">/* Peso normal */</span></code></pre>
+                                    </div>
+                                </div>
+
+                                <h2>🎯 Resumo da Aula</h2>
+                                <div class="summary-box">
+                                    <ul class="summary-list">
+                                        <li><strong>let</strong> = variável que muda</li>
+                                        <li><strong>const</strong> = constante (não muda) - USE POR PADRÃO!</li>
+                                        <li><strong>String</strong> = texto ("abc")</li>
+                                        <li><strong>Number</strong> = número (42, 3.14)</li>
+                                        <li><strong>Boolean</strong> = verdadeiro/falso (true/false)</li>
+                                        <li><strong>===</strong> > sempre use estrito (não use ==)</li>
+                                        <li><strong>&&</strong> = AND, <strong>||</strong> = OR, <strong>!</strong> = NOT</li>
+                                    </ul>
+                                </div>
+
+                                <div class="next-lesson">
+                                    <a href="aula03.html" class="btn btn-primary btn-large">
+                                        Próxima Aula: Funções →
+                                    </a>
+                                </div>
+                            </section>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 CodeAprende - Ensino de front-end gratuito</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

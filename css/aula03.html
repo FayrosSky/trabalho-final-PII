@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 03: Flexbox - CodeAprende</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="../index.html" class="nav-logo">⚡ CodeAprende</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="../html/index.html">HTML</a></li>
+                <li><a href="index.html" class="active">CSS</a></li>
+                <li><a href="../javascript/index.html">JS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="course-page">
+        <section class="course-header css">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="../index.html">Início</a> → 
+                    <a href="index.html">CSS3</a> → 
+                    <span>Aula 03</span>
+                </div>
+                <h1>🎨 Aula 03: Flexbox - Layouts Modernos</h1>
+                <p class="course-intro">
+                    Aprenda Flexbox, o sistema de layout mais poderoso do CSS 
+                    para criar layouts responsivos facilmente.
+                </p>
+            </div>
+        </section>
+
+        <section class="course-content">
+            <div class="container">
+                <div class="course-layout">
+                    
+                    <aside class="lessons-sidebar">
+                        <h3>📚 Conteúdo do Curso</h3>
+                        <ol class="lessons-list">
+                            <li class="lesson-item">
+                                <a href="aula01.html" class="lesson-link">
+                                    <span class="lesson-number">01</span>
+                                    <div class="lesson-info">
+                                        <span class="lesson-title">O que é CSS?</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="lesson-item">
+                                <a href="aula02.html" class="lesson-link">
+                                    <span class="lesson-number">02</span>
+                                    <div class="lesson-info">
+                                        <span class="lesson-title">Seletores</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="lesson-item active">
+                                <a href="aula03.html" class="lesson-link">
+                                    <span class="lesson-number">03</span>
+                                    <div class="lesson-info">
+                                        <span class="lesson-title">Flexbox</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ol>
+                    </aside>
+
+                    <div class="main-content">
+                        <article class="lesson-content">
+                            <header class="lesson-header">
+                                <span class="lesson-badge">Aula 03</span>
+                                <h2>Flexbox - Layout Flexível</h2>
+                            </header>
+
+                            <section class="lesson-body">
+                                <h2>📖 O que é Flexbox?</h2>
+                                <p>
+                                    <strong>Flexbox</strong> é um modelo de layout do CSS que organiza elementos 
+                                    em uma direção (horizontal ou vertical) de forma inteligente e responsiva.
+                                </p>
+
+                                <div class="info-box">
+                                    <h3>💡 Por que Flexbox?</h3>
+                                    <ul>
+                                        <li>✅ Alinhamento fácil (centralizar é trivial!)</li>
+                                        <li>✅ Responsivo por natureza</li>
+                                        <li>✅ Distribui espaço automaticamente</li>
+                                        <li>✅ Substitui floats e hacks antigos</li>
+                                    </ul>
+                                </div>
+
+                                <h2>🎯 1. Ativando Flexbox</h2>
+                                <p>Aplicar <code>display: flex</code> no pai torna os filhos "flexíveis":</p>
+
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">exemplo-basico.html</span>
+                                    </div>
+                                    <pre><code><span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="string">"container"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="string">"item"</span><span class="tag">&gt;</span>1<span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="string">"item"</span><span class="tag">&gt;</span>2<span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="string">"item"</span><span class="tag">&gt;</span>3<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span></code></pre>
+                                </div>
+
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">exemplo-basico.css</span>
+                                    </div>
+                                    <pre><code><span class="selector">.container</span> {
+    <span class="property">display</span>: <span class="value">flex</span>;  <span class="comment">/* ativa flexbox */</span>
+}
+
+<span class="selector">.item</span> {
+    <span class="property">width</span>: <span class="value">100px</span>;
+    <span class="property">height</span>: <span class="value">100px</span>;
+    <span class="property">background</span>: <span class="value">#6366f1</span>;
+    <span class="property">color</span>: <span class="value">white</span>;
+    <span class="property">text-align</span>: <span class="value">center</span>;
+    <span class="property">line-height</span>: <span class="value">100px</span>;
+    <span class="property">font-size</span>: <span class="value">24px</span>;
+}</code></pre>
+                                </div>
+
+                                <div class="info-box">
+                                    <p><strong>Conceito importante:</strong> Quando você aplica <code>display: flex</code> no pai, os filhos automaticamente ficam lado a lado (horizontalmente).</p>
+                                </div>
+
+                                <h2>🎯 2. Eixo Principal vs Eixo Cruzado</h2>
+                                <p>Flexbox trabalha com dois eixos:</p>
+
+                                <table class="explanation-table">
+                                    <tr>
+                                        <th>Eixo</th>
+                                        <th>Descrição</th>
+                                        <th>Padrão</th>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Principal</strong></td>
+                                        <td>Direção dos itens</td>
+                                        <td>Horizontal (←→)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Cruzado</strong></td>
+                                        <td>Perpendicular ao principal</td>
+                                        <td>Vertical (↑↓)</td>
+                                    </tr>
+                                </table>
+
+                                <h2>🎯 3. flex-direction - Direção dos Itens</h2>
+                                <p>Define a direção do eixo principal:</p>
+
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">flex-direction.css</span>
+                                    </div>
+                                    <pre><code><span class="comment">/* Horizontal da esquerda para direita (PADRÃO) */</span>
+<span class="selector">.container</span> {
+    <span class="property">flex-direction</span>: <span class="value">row</span>;
+}
+
+<span class="comment">/* Horizontal da direita para esquerda */</span>
+<span class="selector">.container</span> {
+    <span class="property">flex-direction</span>: <span class="value">row-reverse</span>;
+}
+
+<span class="comment">/* Vertical de cima para baixo */</span>
+<span class="selector">.container</span> {
+    <span class="property">flex-direction</span>: <span class="value">column</span>;
+}
+
+<span class="comment">/* Vertical de baixo para cima */</span>
+<span class="selector">.container</span> {
+    <span class="property">flex-direction</span>: <span class="value">column-reverse</span>;
+}</code></pre>
+                                </div>
+
+                                <div class="info-box">
+                                    <p>💡 <strong>Dica:</strong> Use <code>column</code> para listas verticais ou layouts de coluna.</p>
+                                </div>
+
+                                <h2>🎯 4. justify-content - Alinhamento no Eixo Principal</h2>
+                                <p>Controla como os itens se distribuem horizontalmente:</p>
+
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">justify-content.css</span>
+                                    </div>
+                                    <pre><code><span class="comment">/* À esquerda (PADRÃO) */</span>
+<span class="selector">.container</span> {
+    <span class="property">justify-content</span>: <span class="value">flex-start</span>;
+}
+
+<span class="comment">/* Centralizado */</span>
+<span class="selector">.container</span> {
+    <span class="property">justify-content</span>: <span class="value">center</span>;
+}
+
+<span class="comment">/* À direita */</span>
+<span class="selector">.container</span> {
+    <span class="property">justify-content</span>: <span class="value">flex-end</span>;
+}
+
+<span class="comment">/* Espaçados igualmente (começa/termina nas bordas) */</span>
+<span class="selector">.container</span> {
+    <span class="property">justify-content</span>: <span class="value">space-between</span>;
+}
+
+<span class="comment">/* Espaçados igualmente (mesmo espaço nas bordas) */</span>
+<span class="selector">.container</span> {
+    <span class="property">justify-content</span>: <span class="value">space-around</span>;
+}
+
+<span class="comment">/* Espaçados igualmente (mesmo espaço em todos) */</span>
+<span class="selector">.container</span> {
+    <span class="property">justify-content</span>: <span class="value">space-evenly</span>;
+}</code></pre>
+                                </div>
+
+                                <table class="explanation-table">
+                                    <tr>
+                                        <th>Valor</th>
+                                        <th>Resultado Visual</th>
+                                    </tr>
+                                    <tr>
+                                        <td><code>flex-start</code></td>
+                                        <td>■ ■ ■ _______</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>center</code></td>
+                                        <td>_ _ ■ ■ ■ _ _</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>flex-end</code></td>
+                                        <td>_______ ■ ■ ■</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>space-between</code></td>
+                                        <td>■ _______ ■ _______ ■</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>space-around</code></td>
+                                        <td>_ ■ _ _ ■ _ _ ■ _</td>
+                                    </tr>
+                                </table>
+
+                                <h2>🎯 5. align-items - Alinhamento no Eixo Cruzado</h2>
+                                <p>Controla alinhamento vertical (quando flex-direction é row):</p>
+
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">align-items.css</span>
+                                    </div>
+                                    <pre><code><span class="comment">/* Estica para preencher (PADRÃO) */</span>
+<span class="selector">.container</span> {
+    <span class="property">align-items</span>: <span class="value">stretch</span>;
+}
+
+<span class="comment">/* Topo */</span>
+<span class="selector">.container</span> {
+    <span class="property">align-items</span>: <span class="value">flex-start</span>;
+}
+
+<span class="comment">/* Centro */</span>
+<span class="selector">.container</span> {
+    <span class="property">align-items</span>: <span class="value">center</span>;
+}
+
+<span class="comment">/* Fundo */</span>
+<span class="selector">.container</span> {
+    <span class="property">align-items</span>: <span class="value">flex-end</span>;
+}
+
+<span class="comment">/* Linha de base (para textos) */</span>
+<span class="selector">.container</span> {
+    <span class="property">align-items</span>: <span class="value">baseline</span>;
+}</code></pre>
+                                </div>
+
+                                <div class="info-box">
+                                    <h3>⭐ Caso de Uso Comum: Centralizar Everything</h3>
+                                    <p>Para centralizar um elemento perfeitamente:</p>
+                                    <pre><code><span class="selector">.container</span> {
+    <span class="property">display</span>: <span class="value">flex</span>;
+    <span class="property">justify-content</span>: <span class="value">center</span>;    <span class="comment">/* horizontal */</span>
+    <span class="property">align-items</span>: <span class="value">center</span>;        <span class="comment">/* vertical */</span>
+    <span class="property">height</span>: <span class="value">100vh</span>;              <span class="comment">/* altura total da tela */</span>
+}</code></pre>
+                                </div>
+
+                                <h2>🎯 6. flex-wrap - Quebra de Linha</h2>
+                                <p>Define se os itens devem quebrar para outra linha:</p>
+
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">flex-wrap.css</span>
+                                    </div>
+                                    <pre><code><span class="comment">/* Tudo numa linha (estica) - PADRÃO */</span>
+<span class="selector">.container</span> {
+    <span class="property">flex-wrap</span>: <span class="value">nowrap</span>;
+}
+
+<span class="comment">/* Quebra quando não cabe */</span>
+<span class="selector">.container</span> {
+    <span class="property">flex-wrap</span>: <span class="value">wrap</span>;
+}
+
+<span class="comment">/* Quebra na direção inversa */</span>
+<span class="selector">.container</span> {
+    <span class="property">flex-wrap</span>: <span class="value">wrap-reverse</span>;
+}</code></pre>
+                                </div>
+
+                                <div class="info-box">
+                                    <p>💡 Use <code>wrap</code> para criar layouts responsivos que se adaptam a telas menores.</p>
+                                </div>
+
+                                <h2>🎯 7. gap - Espaçamento entre Itens</h2>
+                                <p>Adiciona espaço entre os itens (muito útil!):</p>
+
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">gap.css</span>
+                                    </div>
+                                    <pre><code><span class="comment">/* Espaço horizontal e vertical */</span>
+<span class="selector">.container</span> {
+    <span class="property">gap</span>: <span class="value">20px</span>;
+}
+
+<span class="comment">/* Espaço separado */</span>
+<span class="selector">.container</span> {
+    <span class="property">gap</span>: <span class="value">10px</span> <span class="value">20px</span>;  <span class="comment">/* row gap | column gap */</span>
+}</code></pre>
+                                </div>
+
+                                <h2>🎯 8. Propriedades nos ITENS (filhos)</h2>
+
+                                <h3>flex - Controlando o Tamanho dos Itens</h3>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">flex-item.css</span>
+                                    </div>
+                                    <pre><code><span class="selector">.item</span> {
+    <span class="property">flex</span>: <span class="value">1</span>;  <span class="comment">/* ocupa espaço proporcional */</span>
+}
+
+<span class="comment">/* Shorthand: flex-grow | flex-shrink | flex-basis */</span>
+<span class="selector">.item</span> {
+    <span class="property">flex</span>: <span class="value">1 1 200px</span>;
+}
+
+<span class="comment">/* grow: quanto cresce */</span>
+<span class="comment">/* shrink: quanto encolhe */</span>
+<span class="comment">/* basis: tamanho inicial */</span></code></pre>
+                                </div>
+
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">exemplo-grow.html</span>
+                                    </div>
+                                    <pre><code><span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="string">"container"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="string">"item"</span><span class="tag">&gt;</span>1<span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="string">"item"</span> <span class="attr">style</span>=<span class="string">"flex: 2;"</span><span class="tag">&gt;</span>2 (duplo)<span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="string">"item"</span><span class="tag">&gt;</span>3<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span></code></pre>
+                                </div>
+
+                                <h3>order - Mudar Ordem Visual</h3>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">order.css</span>
+                                    </div>
+                                    <pre><code><span class="selector">.item1</span> { <span class="property">order</span>: <span class="value">2</span>; }
+<span class="selector">.item2</span> { <span class="property">order</span>: <span class="value">1</span>; }
+<span class="selector">.item3</span> { <span class="property">order</span>: <span class="value">3</span>; }
+
+<span class="comment">/* Visual: item2, item1, item3 */</span></code></pre>
+                                </div>
+
+                                <h3>align-self - Alinhamento Individual</h3>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">align-self.css</span>
+                                    </div>
+                                    <pre><code><span class="comment">/* Um item diferente dos outros */</span>
+<span class="selector">.item2</span> {
+    <span class="property">align-self</span>: <span class="value">flex-end</span>;  <span class="comment">/* vai para o fundo */</span>
+}</code></pre>
+                                </div>
+
+                                <h2>✍️ Exercício Prático: Menu de Navegação</h2>
+                                <div class="exercise-box">
+                                    <h4>📝 Criando um Menu com Flexbox</h4>
+                                    <p>Crie um menu de navegação responsivo:</p>
+                                    
+                                    <div class="code-example">
+                                        <div class="code-header">
+                                            <span class="filename">menu.html</span>
+                                        </div>
+                                        <pre><code><span class="tag">&lt;!DOCTYPE</span> <span class="attr">html</span><span class="tag">&gt;</span>
+<span class="tag">&lt;html</span> <span class="attr">lang</span>=<span class="string">"pt-BR"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;head&gt;</span>
+    <span class="tag">&lt;meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;title&gt;</span>Menu Flexbox<span class="tag">&lt;/title&gt;</span>
+    <span class="tag">&lt;link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"style.css"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;/head&gt;</span>
+<span class="tag">&lt;body&gt;</span>
+    <span class="tag">&lt;nav</span> <span class="attr">class</span>=<span class="string">"navbar"</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="string">"logo"</span><span class="tag">&gt;</span>Logo<span class="tag">&lt;/div&gt;</span>
+        <span class="tag">&lt;ul</span> <span class="attr">class</span>=<span class="string">"menu"</span><span class="tag">&gt;</span>
+            <span class="tag">&lt;li&gt;&lt;a</span> <span class="attr">href</span>=<span class="string">"#"</span><span class="tag">&gt;</span>Início<span class="tag">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="tag">&lt;li&gt;&lt;a</span> <span class="attr">href</span>=<span class="string">"#"</span><span class="tag">&gt;</span>Sobre<span class="tag">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="tag">&lt;li&gt;&lt;a</span> <span class="attr">href</span>=<span class="string">"#"</span><span class="tag">&gt;</span>Contato<span class="tag">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="tag">&lt;/ul&gt;</span>
+    <span class="tag">&lt;/nav&gt;</span>
+<span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span></code></pre>
+                                    </div>
+
+                                    <div class="code-example">
+                                        <div class="code-header">
+                                            <span class="filename">style.css</span>
+                                        </div>
+                                        <pre><code><span class="selector">*:</span> {
+    <span class="property">margin</span>: <span class="value">0</span>;
+    <span class="property">padding</span>: <span class="value">0</span>;
+    <span class="property">box-sizing</span>: <span class="value">border-box</span>;
+}
+
+<span class="selector">.navbar</span> {
+    <span class="property">display</span>: <span class="value">flex</span>;
+    <span class="property">justify-content</span>: <span class="value">space-between</span>;
+    <span class="property">align-items</span>: <span class="value">center</span>;
+    <span class="property">padding</span>: <span class="value">1rem 2rem</span>;
+    <span class="property">background</span>: <span class="value">#333</span>;
+}
+
+<span class="selector">.logo</span> {
+    <span class="property">color</span>: <span class="value">white</span>;
+    <span class="property">font-size</span>: <span class="value">1.5rem</span>;
+    <span class="property">font-weight</span>: <span class="value">bold</span>;
+}
+
+<span class="selector">.menu</span> {
+    <span class="property">display</span>: <span class="value">flex</span>;
+    <span class="property">list-style</span>: <span class="value">none</span>;
+    <span class="property">gap</span>: <span class="value">2rem</span>;
+}
+
+<span class="selector">.menu a</span> {
+    <span class="property">color</span>: <span class="value">white</span>;
+    <span class="property">text-decoration</span>: <span class="value">none</span>;
+    <span class="property">transition</span>: <span class="value">color 0.3s</span>;
+}
+
+<span class="selector">.menu a:hover</span> {
+    <span class="property">color</span>: <span class="value">#6366f1</span>;
+}</code></pre>
+                                    </div>
+                                </div>
+
+                                <h2>🎯 Resumo da Aula</h2>
+                                <div class="summary-box">
+                                    <h4>Propriedades do PAI (container):</h4>
+                                    <ul class="summary-list">
+                                        <li><code>display: flex</code> - ativa flexbox</li>
+                                        <li><code>flex-direction</code> - direção (row/column)</li>
+                                        <li><code>justify-content</code> - alinhamento horizontal</li>
+                                        <li><code>align-items</code> - alinhamento vertical</li>
+                                        <li><code>flex-wrap</code> - se quebra linha</li>
+                                        <li><code>gap</code> - espaçamento entre itens</li>
+                                    </ul>
+
+                                    <h4 style="margin-top: 1rem;">Propriedades dos ITENS (filhos):</h4>
+                                    <ul class="summary-list">
+                                        <li><code>flex</code> - controla crescimento/encolhimento</li>
+                                        <li><code>order</code> - muda ordem visual</li>
+                                        <li><code>align-self</code> - alinhamento individual</li>
+                                    </ul>
+                                </div>
+
+                                <h2>🧠 Quiz Rápido</h2>
+                                <div class="quiz-box">
+                                    <h4>Pergunta 1:</h4>
+                                    <p>Qual propriedade centraliza horizontalmente?</p>
+                                    <details>
+                                        <summary>Ver resposta</summary>
+                                        <p><strong>Resposta:</strong> <code>justify-content: center</code></p>
+                                    </details>
+                                    
+                                    <h4>Pergunta 2:</h4>
+                                    <p>Qual propriedade centraliza verticalmente?</p>
+                                    <details>
+                                        <summary>Ver resposta</summary>
+                                        <p><strong>Resposta:</strong> <code>align-items: center</code></p>
+                                    </details>
+
+                                    <h4>Pergunta 3:</h4>
+                                    <p>Como fazer itens verticais (coluna)?</p>
+                                    <details>
+                                        <summary>Ver resposta</summary>
+                                        <p><strong>Resposta:</strong> <code>flex-direction: column</code></p>
+                                    </details>
+                                </div>
+
+                                <div class="next-lesson project">
+                                    <a href="../javascript/index.html" class="btn btn-primary btn-large">
+                                        ⚡ Próximo Módulo: JavaScript →
+                                    </a>
+                                </div>
+                            </section>
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 CodeAprende - Ensino de front-end gratuito</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

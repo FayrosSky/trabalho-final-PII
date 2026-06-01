@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 01: O que é CSS? - CodeAprende</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="../index.html" class="nav-logo">⚡ CodeAprende</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="../html/index.html">HTML</a></li>
+                <li><a href="index.html" class="active">CSS</a></li>
+                <li><a href="../javascript/index.html">JS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="course-page">
+        <section class="course-header css">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="../index.html">Início</a> → 
+                    <a href="index.html">CSS3</a> → 
+                    <span>Aula 01</span>
+                </div>
+                <h1>🎨 Aula 01: O que é CSS?</h1>
+                <p class="course-intro">
+                    Descubra o que é CSS, como estilizar páginas web e por que 
+                    CSS é essencial para o desenvolvimento front-end.
+                </p>
+            </div>
+        </section>
+
+        <section class="course-content">
+            <div class="container">
+                <div class="course-layout">
+                    
+                    <aside class="lessons-sidebar">
+                        <h3>📚 Conteúdo do Curso</h3>
+                        <ol class="lessons-list">
+                            <li class="lesson-item active">
+                                <a href="aula01.html" class="lesson-link">
+                                    <span class="lesson-number">01</span>
+                                    <div class="lesson-info">
+                                        <span class="lesson-title">O que é CSS?</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="lesson-item">
+                                <a href="aula02.html" class="lesson-link">
+                                    <span class="lesson-number">02</span>
+                                    <div class="lesson-info">
+                                        <span class="lesson-title">Seletores</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="lesson-item">
+                                <a href="aula03.html" class="lesson-link">
+                                    <span class="lesson-number">03</span>
+                                    <div class="lesson-info">
+                                        <span class="lesson-title">Flexbox</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ol>
+                    </aside>
+
+                    <div class="main-content">
+                        <article class="lesson-content">
+                            <header class="lesson-header">
+                                <span class="lesson-badge">Aula 01</span>
+                                <h2>O que você vai aprender</h2>
+                            </header>
+
+                            <section class="lesson-body">
+                                <ul class="learning-objectives">
+                                    <li>✅ O significado de CSS</li>
+                                    <li>✅ Como CSS funciona com HTML</li>
+                                    <li>✅ Três formas de aplicar CSS</li>
+                                    <li>✅ Sintaxe básica do CSS</li>
+                                </ul>
+
+                                <h2>📖 O que é CSS?</h2>
+                                <p>
+                                    <strong>CSS</strong> significa <em>Cascading Style Sheets</em> 
+                                    (Folhas de Estilo em Cascata). É a linguagem que define a 
+                                    <strong>apresentação</strong> de documentos HTML [web:2].
+                                </p>
+
+                                <div class="info-box">
+                                    <h3>💡 Analogia: HTML + CSS = Casa Completa</h3>
+                                    <p>
+                                        Se <strong>HTML</strong> é a <em>estrutura</em> da casa (paredes, portas, telhado),
+                                        então <strong>CSS</strong> é a <em>decoração</em> (pintura, móveis, estilo):
+                                    </p>
+                                    <ul>
+                                        <li><strong>HTML</strong> = Paredes brutas de cimento</li>
+                                        <li><strong>CSS</strong> = Tinta colorida, papel de parede, iluminação</li>
+                                    </ul>
+                                </div>
+
+                                <h2>🎯 Sintaxe Básica do CSS</h2>
+                                <p>Um regra CSS tem três partes:</p>
+
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">sintaxe-basica.css</span>
+                                    </div>
+                                    <pre><code><span class="comment">/* SELETOR { PROPIEDADE: VALOR; } */</span>
+
+<span class="selector">h1</span> <span class="comment">/* seletor */</span> {
+    <span class="property">color</span>: <span class="value">red</span>;        <span class="comment">/* propriedade: valor */</span>
+    <span class="property">font-size</span>: <span class="value">20px</span>;   <span class="comment">/* propriedade: valor */</span>
+    <span class="property">background</span>: <span class="value">#fff</span>;<span class="comment">/* propriedade: valor */</span>
+}</code></pre>
+                                </div>
+
+                                <table class="explanation-table">
+                                    <tr>
+                                        <td><strong>Seletor</strong></td>
+                                        <td>Elemento HTML que vai receber o estilo (ex: <code>h1</code>, <code>p</code>, <code>.classe</code>)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Propriedade</strong></td>
+                                        <td>O que você quer mudar (ex: <code>color</code>, <code>font-size</code>, <code>margin</code>)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Valor</strong></td>
+                                        <td>O valor da propriedade (ex: <code>red</code>, <code>20px</code>, <code>#fff</code>)</td>
+                                    </tr>
+                                </table>
+
+                                <h2>📝 3 Formas de Aplicar CSS</h2>
+
+                                <h3>1. CSS Inline (dentro do HTML)</h3>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">inline.html</span>
+                                    </div>
+                                    <pre><code><span class="tag">&lt;p</span> <span class="attr">style</span>=<span class="string">"color: blue; font-size: 18px;"</span><span class="tag">&gt;</span>
+    Este texto está azul e maior
+<span class="tag">&lt;/p&gt;</span></code></pre>
+                                </div>
+                                <div class="info-box">
+                                    <p>⚠️ <strong>Não recomendado!</strong> Mistura conteúdo com estilo. Use apenas para testes rápidos.</p>
+                                </div>
+
+                                <h3>2. CSS Interno (na mesma página)</h3>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">interno.html</span>
+                                    </div>
+                                    <pre><code><span class="tag">&lt;!DOCTYPE</span> <span class="attr">html</span><span class="tag">&gt;</span>
+<span class="tag">&lt;html&gt;</span>
+<span class="tag">&lt;head&gt;</span>
+    <span class="tag">&lt;style&gt;</span>
+        <span class="selector">h1</span> {
+            <span class="property">color</span>: <span class="value">green</span>;
+        }
+    <span class="tag">&lt;/style&gt;</span>
+<span class="tag">&lt;/head&gt;</span>
+<span class="tag">&lt;body&gt;</span>
+    <span class="tag">&lt;h1&gt;</span>Título verde<span class="tag">&lt;/h1&gt;</span>
+<span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span></code></pre>
+                                </div>
+                                <div class="info-box">
+                                    <p>✅ Bom para páginas únicas. Mas o ideal é usar CSS externo.</p>
+                                </div>
+
+                                <h3>3. CSS Externo (arquivo separado) - <strong>MELHOR OPÇÃO</strong></h3>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">externo.html</span>
+                                    </div>
+                                    <pre><code><span class="comment">&lt;!-- NO HTML (index.html) --&gt;</span>
+<span class="tag">&lt;head&gt;</span>
+    <span class="tag">&lt;link</span> 
+        <span class="attr">rel</span>=<span class="string">"stylesheet"</span> 
+        <span class="attr">href</span>=<span class="string">"style.css"</span>
+    <span class="tag">&gt;</span>
+<span class="tag">&lt;/head&gt;</span>
+
+<span class="comment">&lt;!-- NO ARQUIVO (style.css) --&gt;</span>
+<span class="selector">p</span> {
+    <span class="property">color</span>: <span class="value">purple</span>;
+    <span class="property">font-size</span>: <span class="value">16px</span>;
+}</code></pre>
+                                </div>
+                                <div class="info-box">
+                                    <p>✅ <strong>RECOMENDADO!</strong> Separa conteúdo (HTML) de estilo (CSS). Reutilizável em várias páginas.</p>
+                                </div>
+
+                                <h2>🎨 Propriedades CSS Mais Comuns</h2>
+
+                                <h3>Cores e Textos</h3>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">cores-texto.css</span>
+                                    </div>
+                                    <pre><code><span class="selector">p</span> {
+    <span class="property">color</span>: <span class="value">#6366f1</span>;           <span class="comment">/* cor do texto (hex) */</span>
+    <span class="property">font-size</span>: <span class="value">16px</span>;          <span class="comment">/* tamanho da fonte */</span>
+    <span class="property">font-weight</span>: <span class="value">bold</span>;        <span class="comment">/* negrito */</span>
+    <span class="property">text-align</span>: <span class="value">center</span>;      <span class="comment">/* alinha texto: center/left/right */</span>
+    <span class="property">text-decoration</span>: <span class="value">none</span>;   <span class="comment">/* remove sublinhado */</span>
+    <span class="property">line-height</span>: <span class="value">1.6</span>;        <span class="comment">/* espaçamento entre linhas */</span>
+}</code></pre>
+                                </div>
+
+                                <h3>Box Model (Margens e Paddings)</h3>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">box-model.css</span>
+                                    </div>
+                                    <pre><code><span class="selector">div</span> {
+    <span class="property">margin</span>: <span class="value">20px</span>;             <span class="comment">/* espaço FORA do elemento */</span>
+    <span class="property">padding</span>: <span class="value">15px</span>;            <span class="comment">/* espaço DENTRO do elemento */</span>
+    <span class="property">border</span>: <span class="value">2px solid black</span>; <span class="comment">/* borda: largura tipo cor */</span>
+    <span class="property">width</span>: <span class="value">300px</span>;             <span class="comment">/* largura */</span>
+    <span class="property">height</span>: <span class="value">200px</span>;            <span class="comment">/* altura */</span>
+}</code></pre>
+                                </div>
+
+                                <div class="info-box">
+                                    <h3>📌 Box Model Explicado</h3>
+                                    <p>
+                                        Todo elemento HTML é uma "caixa":
+                                    </p>
+                                    <p><strong>content → padding → border → margin</strong></p>
+                                </div>
+
+                                <h2>✍️ Exercício Prático: Primeiro Estilo</h2>
+                                <div class="exercise-box">
+                                    <h4>📝 Criando seu Primeiro CSS</h4>
+                                    <ol>
+                                        <li>Crie um arquivo <code>index.html</code> com:</li>
+                                    </ol>
+                                    <div class="code-example">
+                                        <pre><code><span class="tag">&lt;!DOCTYPE</span> <span class="attr">html</span><span class="tag">&gt;</span>
+<span class="tag">&lt;html</span> <span class="attr">lang</span>=<span class="string">"pt-BR"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;head&gt;</span>
+    <span class="tag">&lt;meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"style.css"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;title&gt;</span>Meu Primeiro CSS<span class="tag">&lt;/title&gt;</span>
+<span class="tag">&lt;/head&gt;</span>
+<span class="tag">&lt;body&gt;</span>
+    <span class="tag">&lt;h1&gt;</span>Olá, CSS!<span class="tag">&lt;/h1&gt;</span>
+    <span class="tag">&lt;p&gt;</span>Este é meu primeiro estilo.<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span></code></pre>
+                                    </div>
+                                    <ol start="2">
+                                        <li>Crie um arquivo <code>style.css</code> na mesma pasta:</li>
+                                    </ol>
+                                    <div class="code-example">
+                                        <pre><code><span class="selector">body</span> {
+    <span class="property">font-family</span>: <span class="value">Arial, sans-serif</span>;
+    <span class="property">background</span>: <span class="value">#f0f0f0</span>;
+    <span class="property">padding</span>: <span class="value">50px</span>;
+}
+
+<span class="selector">h1</span> {
+    <span class="property">color</span>: <span class="value">#6366f1</span>;
+    <span class="property">text-align</span>: <span class="value">center</span>;
+}
+
+<span class="selector">p</span> {
+    <span class="property">color</span>: <span class="value">#666</span>;
+    <span class="property">font-size</span>: <span class="value">18px</span>;
+    <span class="property">text-align</span>: <span class="value">center</span>;
+}</code></pre>
+                                    </div>
+                                    <ol start="3">
+                                        <li>Abra <code>index.html</code> no navegador e veja o resultado! 🎉</li>
+                                    </ol>
+                                </div>
+
+                                <h2>🎯 Resumo da Aula</h2>
+                                <div class="summary-box">
+                                    <ul class="summary-list">
+                                        <li>CSS = <strong>Cascading Style Sheets</strong></li>
+                                        <li>CSS define a <strong>apresentação</strong> (estilo) do HTML</li>
+                                        <li>Sintaxe: <code>seletor { propriedade: valor; }</code></li>
+                                        <li>3 formas: <strong>inline</strong> (não use), <strong>interno</strong>, <strong>externo</strong> (ideal)</li>
+                                        <li>Propriedades comuns: <code>color</code>, <code>font-size</code>, <code>margin</code>, <code>padding</code>, <code>border</code></li>
+                                        <li>Use <strong>arquivo .css separado</strong> para organizar seu código</li>
+                                    </ul>
+                                </div>
+
+                                <div class="next-lesson">
+                                    <a href="aula02.html" class="btn btn-primary btn-large">
+                                        Próxima Aula: Seletores →
+                                    </a>
+                                </div>
+                            </section>
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 CodeAprende - Ensino de front-end gratuito</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

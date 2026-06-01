@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 02: Tags Básicas - CodeAprende</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="../index.html" class="nav-logo">⚡ CodeAprende</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="index.html" class="active">HTML</a></li>
+                <li><a href="../css/index.html">CSS</a></li>
+                <li><a href="../javascript/index.html">JS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="course-page">
+        <section class="course-header html">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="../index.html">Início</a> → 
+                    <a href="index.html">HTML5</a> → 
+                    <span>Aula 02</span>
+                </div>
+                <h1>📝 Aula 02: Tags Básicas de HTML</h1>
+                <p class="course-intro">
+                    Aprenda as tags HTML mais importantes: títulos, parágrafos, 
+                    negrito, itálico e quebra de linha.
+                </p>
+            </div>
+        </section>
+
+        <section class="course-content">
+            <div class="container">
+                <div class="course-layout">
+                    
+                    <aside class="lessons-sidebar">
+                        <h3>📚 Conteúdo do Curso</h3>
+                        <ol class="lessons-list">
+                            <li class="lesson-item">
+                                <a href="aula01.html" class="lesson-link">
+                                    <span class="lesson-number">01</span>
+                                    <div class="lesson-info">
+                                        <span class="lesson-title">O que é HTML?</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="lesson-item active">
+                                <a href="aula02.html" class="lesson-link">
+                                    <span class="lesson-number">02</span>
+                                    <div class="lesson-info">
+                                        <span class="lesson-title">Tags básicas</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="lesson-item">
+                                <a href="aula03.html" class="lesson-link">
+                                    <span class="lesson-number">03</span>
+                                    <div class="lesson-info">
+                                        <span class="lesson-title">Formulários</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ol>
+                    </aside>
+
+                    <div class="main-content">
+                        <article class="lesson-content">
+                            <header class="lesson-header">
+                                <span class="lesson-badge">Aula 02</span>
+                                <h2>Tags Básicas de Texto</h2>
+                            </header>
+
+                            <section class="lesson-body">
+                                <h2>📖 O que são Tags HTML?</h2>
+                                <p>
+                                    <strong>Tags</strong> são os "comandos" do HTML. Elas dizem ao navegador 
+                                    como exibir o conteúdo. A maioria das tags vem em pares: 
+                                    <code>&lt;tag&gt;</code> e <code>&lt;/tag&gt;</code> [web:1].
+                                </p>
+
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">explicacao-tag.html</span>
+                                    </div>
+                                    <pre><code><span class="comment">&lt;!-- Tag ABERTA --&gt;</span>
+<span class="tag">&lt;p&gt;</span>
+    Este é o conteúdo
+<span class="comment">&lt;!-- Tag FECHADA (com /) --&gt;</span>
+<span class="tag">&lt;/p&gt;</span></code></pre>
+                                </div>
+
+                                <h2>🎯 1. Títulos (Headings)</h2>
+                                <p>HTML tem 6 níveis de títulos, do <code>&lt;h1&gt;</code> (mais importante) ao <code>&lt;h6&gt;</code> (menos importante):</p>
+
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">titulos.html</span>
+                                    </div>
+                                    <pre><code><span class="tag">&lt;h1&gt;</span>Título Principal da Página<span class="tag">&lt;/h1&gt;</span>
+<span class="tag">&lt;h2&gt;</span>Subtítulo<span class="tag">&lt;/h2&gt;</span>
+<span class="tag">&lt;h3&gt;</span>Seção<span class="tag">&lt;/h3&gt;</span>
+<span class="tag">&lt;h4&gt;</span>Subseção<span class="tag">&lt;/h4&gt;</span>
+<span class="tag">&lt;h5&gt;</span>Detalhe<span class="tag">&lt;/h5&gt;</span>
+<span class="tag">&lt;h6&gt;</span>Informação menor<span class="tag">&lt;/h6&gt;</span></code></pre>
+                                </div>
+
+                                <div class="info-box">
+                                    <h3>⚠️ Dica Importante</h3>
+                                    <p>
+                                        Use apenas <strong>um &lt;h1&gt;</strong> por página! 
+                                        Ele define o tema principal para SEO e acessibilidade.
+                                    </p>
+                                </div>
+
+                                <h2>📝 2. Parágrafos</h2>
+                                <p>O <code>&lt;p&gt;</code> é a tag para parágrafos de texto:</p>
+
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">paragrafos.html</span>
+                                    </div>
+                                    <pre><code><span class="tag">&lt;p&gt;</span>
+    Este é um parágrafo de texto. 
+    O navegador adiciona espaço antes e depois automaticamente.
+<span class="tag">&lt;/p&gt;</span>
+
+<span class="tag">&lt;p&gt;</span>
+    Este é outro parágrafo.
+<span class="tag">&lt;/p&gt;</span></code></pre>
+                                </div>
+
+                                <h2>✏️ 3. Formatação de Texto</h2>
+
+                                <h3>Negrito (Bold)</h3>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">negrito.html</span>
+                                    </div>
+                                    <pre><code><span class="comment">&lt;!-- Forma SEMÂNTICA (recomendada) --&gt;</span>
+<span class="tag">&lt;strong&gt;</span>Este texto é importante<span class="tag">&lt;/strong&gt;</span>
+
+<span class="comment">&lt;!-- Forma visual (antiga) --&gt;</span>
+<span class="tag">&lt;b&gt;</span>Este texto está em negrito<span class="tag">&lt;/b&gt;</span></code></pre>
+                                </div>
+
+                                <h3>Itálico</h3>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">itálico.html</span>
+                                    </div>
+                                    <pre><code><span class="comment">&lt;!-- Forma SEMÂNTICA (recomendada) --&gt;</span>
+<span class="tag">&lt;em&gt;</span>Este texto é enfatizado<span class="tag">&lt;/em&gt;</span>
+
+<span class="comment">&lt;!-- Forma visual (antiga) --&gt;</span>
+<span class="tag">&lt;i&gt;</span>Este texto está em itálico<span class="tag">&lt;/i&gt;</span></code></pre>
+                                </div>
+
+                                <h3>Outras tags de formatação:</h3>
+                                <table class="explanation-table">
+                                    <tr>
+                                        <td><code>&lt;u&gt;</code></td>
+                                        <td>Texto sublinhado</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>&lt;s&gt;</code></td>
+                                        <td>Texto riscado (texto deletado)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>&lt;mark&gt;</code></td>
+                                        <td>Texto marcado (highlight amarelo)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>&lt;small&gt;</code></td>
+                                        <td>Texto pequeno (letra miúda)</td>
+                                    </tr>
+                                </table>
+
+                                <h2>📏 4. Quebra de Linha e Linha Horizontal</h2>
+
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">quebras.html</span>
+                                    </div>
+                                    <pre><code><span class="comment">&lt;!-- Quebra de linha (tag vazia, não fecha) --&gt;</span>
+<span class="tag">&lt;p&gt;</span>Primeira linha<span class="tag">&lt;br&gt;</span>Segunda linha<span class="tag">&lt;/p&gt;</span>
+
+<span class="comment">&lt;!-- Linha horizontal (separador) --&gt;</span>
+<span class="tag">&lt;p&gt;</span>Texto acima da linha<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;hr&gt;</span>
+<span class="tag">&lt;p&gt;</span>Texto abaixo da linha<span class="tag">&lt;/p&gt;</span></code></pre>
+                                </div>
+
+                                <div class="info-box">
+                                    <h3>📌 Tags Vazias</h3>
+                                    <p>
+                                        <code>&lt;br&gt;</code> e <code>&lt;hr&gt;</code> são <strong>tags vazias</strong> 
+                                        (não têm conteúdo), então não precisam de tag de fechamento.
+                                    </p>
+                                </div>
+
+                                <h2>🎨 5. Citações e Código</h2>
+
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">citacoes.html</span>
+                                    </div>
+                                    <pre><code><span class="comment">&lt;!-- Citação curta (inline) --&gt;</span>
+<span class="tag">&lt;p&gt;</span>O professor disse: <span class="tag">&lt;q&gt;</span>Estudem todos os dias<span class="tag">&lt;/q&gt;</span> para passar.<span class="tag">&lt;/p&gt;</span>
+
+<span class="comment">&lt;!-- Citação longa (bloco) --&gt;</span>
+<span class="tag">&lt;blockquote&gt;</span>
+    Este é um trecho longo de um livro.
+    Aparece recuado automaticamente.
+<span class="tag">&lt;/blockquote&gt;</span>
+
+<span class="comment">&lt;!-- Código inline (na mesma linha) --&gt;</span>
+<span class="tag">&lt;p&gt;</span>Use a tag <span class="tag">&lt;<span class="attr">code</span>&gt;</span>para mostrar código<span class="tag">&lt;/code&gt;</span> na texto.<span class="tag">&lt;/p&gt;</span>
+
+<span class="comment">&lt;!-- Bloco de código --&gt;</span>
+<span class="tag">&lt;pre&gt;</span>
+    Este texto mantém
+    a formatação original
+    (espaços e quebras)
+<span class="tag">&lt;/pre&gt;</span></code></pre>
+                                </div>
+
+                                <h2>✍️ Exercício Prático</h2>
+                                <div class="exercise-box">
+                                    <h4>📝 Criando uma Página de Biografia</h4>
+                                    <p>Crie um arquivo <code>biografia.html</code> com:</p>
+                                    <ol>
+                                        <li>Um <code>&lt;h1&gt;</code> com seu nome</li>
+                                        <li>Um <code>&lt;h2&gt;</code> com seu apelido/cargo</li>
+                                        <li>Três <code>&lt;p&gt;</code> sobre você</li>
+                                        <li>Use <code>&lt;strong&gt;</code> para destacar palavras importantes</li>
+                                        <li>Use <code>&lt;em&gt;</code> para enfatizar</li>
+                                        <li>Use <code>&lt;br&gt;</code> para quebrar linhas</li>
+                                        <li>Adicione uma <code>&lt;hr&gt;</code> no final</li>
+                                    </ol>
+                                </div>
+
+                                <h2>📝 Código de Exemplo Completo</h2>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">exercicio-completo.html</span>
+                                    </div>
+                                    <pre><code><span class="tag">&lt;!DOCTYPE</span> <span class="attr">html</span><span class="tag">&gt;</span>
+<span class="tag">&lt;html</span> <span class="attr">lang</span>=<span class="string">"pt-BR"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;head&gt;</span>
+    <span class="tag">&lt;meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;title&gt;</span>Minha Biografia<span class="tag">&lt;/title&gt;</span>
+<span class="tag">&lt;/head&gt;</span>
+<span class="tag">&lt;body&gt;</span>
+    <span class="tag">&lt;h1&gt;</span>Davyd Lucas<span class="tag">&lt;/h1&gt;</span>
+    <span class="tag">&lt;h2&gt;</span>Desenvolvedor Front-End em Aprendizado<span class="tag">&lt;/h2&gt;</span>
+    
+    <span class="tag">&lt;p&gt;</span>
+        Olá! Sou o <span class="tag">&lt;strong&gt;</span>Davyd<span class="tag">&lt;/strong&gt;</span>, 
+        estou aprendendo <span class="tag">&lt;em&gt;</span>desenvolvimento web<span class="tag">&lt;/em&gt;</span>.
+    <span class="tag">&lt;/p&gt;</span>
+    
+    <span class="tag">&lt;p&gt;</span>
+        Minha jornada começou em 2024. 
+        Estudo <span class="tag">&lt;strong&gt;</span>HTML<span class="tag">&lt;/strong&gt;</span>, 
+        <span class="tag">&lt;strong&gt;</span>CSS<span class="tag">&lt;/strong&gt;</span> e 
+        <span class="tag">&lt;strong&gt;</span>JavaScript<span class="tag">&lt;/strong&gt;</span>.
+    <span class="tag">&lt;/p&gt;</span>
+    
+    <span class="tag">&lt;p&gt;</span>
+        Meu objetivo é trabalhar com 
+        <span class="tag">&lt;strong&gt;</span>front-end<span class="tag">&lt;/strong&gt;</span><span class="tag">&lt;br&gt;</span>
+        em uma boa empresa.<span class="tag">&lt;/p&gt;</span>
+    
+    <span class="tag">&lt;hr&gt;</span>
+    <span class="tag">&lt;p&gt;</span>&lt;small&gt;Criado em 2026&lt;/small&gt;<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span></code></pre>
+                                </div>
+
+                                <h2>🎯 Resumo da Aula</h2>
+                                <div class="summary-box">
+                                    <h4>Tags Aprendidas:</h4>
+                                    <ul class="summary-list">
+                                        <li><code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code> - Títulos</li>
+                                        <li><code>&lt;p&gt;</code> - Parágrafos</li>
+                                        <li><code>&lt;strong&gt;</code> - Negrito (importante)</li>
+                                        <li><code>&lt;em&gt;</code> - Itálico (ênfase)</li>
+                                        <li><code>&lt;br&gt;</code> - Quebra de linha</li>
+                                        <li><code>&lt;hr&gt;</code> - Linha horizontal</li>
+                                        <li><code>&lt;blockquote&gt;</code> - Citação longa</li>
+                                        <li><code>&lt;code&gt;</code> - Código inline</li>
+                                        <li><code>&lt;pre&gt;</code> - Bloco de código formatado</li>
+                                    </ul>
+                                </div>
+
+                                <div class="next-lesson">
+                                    <a href="aula03.html" class="btn btn-primary btn-large">
+                                        Próxima Aula: Formulários →
+                                    </a>
+                                </div>
+                            </section>
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 CodeAprende - Ensino de front-end gratuito</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

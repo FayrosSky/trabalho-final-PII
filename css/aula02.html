@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 02: Seletores CSS - CodeAprende</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="../index.html" class="nav-logo">⚡ CodeAprende</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="../html/index.html">HTML</a></li>
+                <li><a href="index.html" class="active">CSS</a></li>
+                <li><a href="../javascript/index.html">JS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="course-page">
+        <section class="course-header css">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="../index.html">Início</a> → 
+                    <a href="index.html">CSS3</a> → 
+                    <span>Aula 02</span>
+                </div>
+                <h1>🎨 Aula 02: Seletores CSS</h1>
+                <p class="course-intro">
+                    Aprenda a selecionar elementos HTML para estilizar: classes, IDs, 
+                    atributos e combinadores.
+                </p>
+            </div>
+        </section>
+
+        <section class="course-content">
+            <div class="container">
+                <div class="course-layout">
+                    
+                    <aside class="lessons-sidebar">
+                        <h3>📚 Conteúdo do Curso</h3>
+                        <ol class="lessons-list">
+                            <li class="lesson-item">
+                                <a href="aula01.html" class="lesson-link">
+                                    <span class="lesson-number">01</span>
+                                    <div class="lesson-info">
+                                        <span class="lesson-title">O que é CSS?</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="lesson-item active">
+                                <a href="aula02.html" class="lesson-link">
+                                    <span class="lesson-number">02</span>
+                                    <div class="lesson-info">
+                                        <span class="lesson-title">Seletores</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="lesson-item">
+                                <a href="aula03.html" class="lesson-link">
+                                    <span class="lesson-number">03</span>
+                                    <div class="lesson-info">
+                                        <span class="lesson-title">Flexbox</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ol>
+                    </aside>
+
+                    <div class="main-content">
+                        <article class="lesson-content">
+                            <header class="lesson-header">
+                                <span class="lesson-badge">Aula 02</span>
+                                <h2>Seletores CSS</h2>
+                            </header>
+
+                            <section class="lesson-body">
+                                <h2>📖 O que são Seletores?</h2>
+                                <p>
+                                    <strong>Seletores</strong> são "endereços" que dizem ao CSS 
+                                    qual elemento HTML estilizar [web:2].
+                                </p>
+
+                                <h2>🎯 1. Seletor de Elemento (Tag)</h2>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">seletor-elemento.css</span>
+                                    </div>
+                                    <pre><code><span class="comment">/* Seleciona TODOS os &lt;p&gt; da página */</span>
+<span class="selector">p</span> {
+    <span class="property">color</span>: <span class="value">blue</span>;
+    <span class="property">font-size</span>: <span class="value">16px</span>;
+}</code></pre>
+                                </div>
+
+                                <h2>🎯 2. Seletor de Classe (.classe)</h2>
+                                <p>A <strong>classe</strong> é reutilizável em vários elementos:</p>
+
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">classe.html</span>
+                                    </div>
+                                    <pre><code><span class="comment">&lt;!-- HTML --&gt;</span>
+<span class="tag">&lt;p</span> <span class="attr">class</span>=<span class="string">"destaque"</span><span class="tag">&gt;</span>Texto importance<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;h1</span> <span class="attr">class</span>=<span class="string">"destaque"</span><span class="tag">&gt;</span>Título importante<span class="tag">&lt;/h1&gt;</span></code></pre>
+                                </div>
+
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">classe.css</span>
+                                    </div>
+                                    <pre><code><span class="comment">/* CSS - note o PONTO (.) antes do nome */</span>
+<span class="selector">.destaque</span> {
+    <span class="property">color</span>: <span class="value">#6366f1</span>;
+    <span class="property">font-weight</span>: <span class="value">bold</span>;
+}</code></pre>
+                                </div>
+
+                                <div class="info-box">
+                                    <p>✅ <strong>Use classes!</strong> São reutilizáveis eorganizadas.</p>
+                                </div>
+
+                                <h2>🎯 3. Seletor de ID (#id)</h2>
+                                <p>O <strong>ID</strong> é único - só pode usar uma vez na página:</p>
+
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">id.html</span>
+                                    </div>
+                                    <pre><code><span class="comment">&lt;!-- HTML --&gt;</span>
+<span class="tag">&lt;header</span> <span class="attr">id</span>=<span class="string">" topo"</span><span class="tag">&gt;</span><span class="tag">&lt;/header&gt;</span>
+<span class="tag">&lt;footer</span> <span class="attr">id</span>=<span class="string">"footer"</span><span class="tag">&gt;</span><span class="tag">&lt;/footer&gt;</span></code></pre>
+                                </div>
+
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">id.css</span>
+                                    </div>
+                                    <pre><code><span class="comment">/* CSS - note o HASHTAG (#) antes do nome */</span>
+<span class="selector">#topo</span> {
+    <span class="property">background</span>: <span class="value">#333</span>;
+    <span class="property">color</span>: <span class="value">white</span>;
+}</code></pre>
+                                </div>
+
+                                <table class="explanation-table">
+                                    <tr>
+                                        <th>Classe (.classe)</th>
+                                        <th>ID (#id)</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Reutilizável em vários elementos</td>
+                                        <td>Único (apenas 1 elemento)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Use para componentes</td>
+                                        <td>Use para seções únicas</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>PREFERIDO</strong></td>
+                                        <td>Usar menos</td>
+                                    </tr>
+                                </table>
+
+                                <h2>🎯 4. Seletor Universal (*)</h2>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">universal.css</span>
+                                    </div>
+                                    <pre><code><span class="comment">/* Seleciona TODOS os elementos */</span>
+<span class="selector">*</span> {
+    <span class="property">margin</span>: <span class="value">0</span>;
+    <span class="property">padding</span>: <span class="value">0</span>;
+    <span class="property">box-sizing</span>: <span class="value">border-box</span>;
+}</code></pre>
+                                </div>
+                                <div class="info-box">
+                                    <p>✅ Usado no <strong>CSS Reset</strong> para padronizar todos os navegadores.</p>
+                                </div>
+
+                                <h2>🎯 5. Seletor de Atributo</h2>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">atributo.css</span>
+                                    </div>
+                                    <pre><code><span class="comment">/* Seleciona inputs tipo email */</span>
+<span class="selector">input[type="email"]</span> {
+    <span class="property">border</span>: <span class="value">2px solid blue</span>;
+}
+
+<span class="comment">/* Seleciona todos links externos */</span>
+<span class="selector">a[href*="gmail.com"]</span> {
+    <span class="property">color</span>: <span class="value">red</span>;
+}</code></pre>
+                                </div>
+
+                                <h2>🎯 6. Seletor Descendente (espaço)</h2>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">descendente.css</span>
+                                    </div>
+                                    <pre><code><span class="comment">/* Seleciona p DENTRO de .container */</span>
+<span class="selector">.container p</span> {
+    <span class="property">color</span>: <span class="value">gray</span>;
+}
+
+<span class="comment">/* Seleciona li DENTRO de ul */</span>
+<span class="selector">ul li</span> {
+    <span class="property">list-style</span>: <span class="value">square</span>;
+}</code></pre>
+                                </div>
+
+                                <h2>🎯 7. Seletor Filho (>)</h2>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">filho.css</span>
+                                    </div>
+                                    <pre><code><span class="comment">/* Seleciona SOMENTE filhos diretos */</span>
+<span class="selector">.container > p</span> {
+    <span class="property">color</span>: <span class="value">blue</span>;
+}
+
+<span class="comment">/* Diferença: */</span>
+<span class="selector">.container p</span>   <span class="comment">/* todos os netos, bisnetos... */</span>
+<span class="selector">.container > p</span> <span class="comment">/* apenas filhos diretos */</span></code></pre>
+                                </div>
+
+                                <h2>🎯 8. Seletor de Irmãos Adjacentes (+)</h2>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">irmao.css</span>
+                                    </div>
+                                    <pre><code><span class="comment">/* Seleciona p IMEDIATAMENTE após h1 */</span>
+<span class="selector">h1 + p</span> {
+    <span class="property">margin-top</span>: <span class="value">0</span>;
+}</code></pre>
+                                </div>
+
+                                <h2>🎯 9. Pseudo-classes (:hover, :focus, etc)</h2>
+                                <div class="code-example">
+                                    <div class="code-header">
+                                        <span class="filename">pseudo-classes.css</span>
+                                    </div>
+                                    <pre><code><span class="comment">/* Quando passa o mouse */</span>
+<span class="selector">a:hover</span> {
+    <span class="property">color</span>: <span class="value">red</span>;
+    <span class="property">text-decoration</span>: <span class="value">underline</span>;
+}
+
+<span class="comment">/* Quando clica no input */</span>
+<span class="selector">input:focus</span> {
+    <span class="property">border-color</span>: <span class="value">blue</span>;
+    <span class="property">outline</span>: <span class="value">none</span>;
+}
+
+<span class="comment">/* Primeiro elemento */</span>
+<span class="selector">li:first-child</span> {
+    <span class="property">font-weight</span>: <span class="value">bold</span>;
+}
+
+<span class="comment">/* Par (2, 4, 6...) */</span>
+<span class="selector">tr:nth-child(even)</span> {
+    <span class="property">background</span>: <span class="value">#f0f0f0</span>;
+}</code></pre>
+                                </div>
+
+                                <h2>✍️ Exercício Prático: Estilize um Card</h2>
+                                <div class="exercise-box">
+                                    <h4>📝 Criando um Card com Seletores</h4>
+                                    <div class="code-example">
+                                        <div class="code-header">
+                                            <span class="filename">card.html</span>
+                                        </div>
+                                        <pre><code><span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="string">"card"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;h2</span> <span class="attr">class</span>=<span class="string">"card-title"</span><span class="tag">&gt;</span>Título<span class="tag">&lt;/h2&gt;</span>
+    <span class="tag">&lt;p</span> <span class="attr">class</span>=<span class="string">"card-text"</span><span class="tag">&gt;</span>Texto<span class="tag">&lt;/p&gt;</span>
+    <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">class</span>=<span class="string">"btn"</span><span class="tag">&gt;</span>Link<span class="tag">&lt;/a&gt;</span>
+<span class="tag">&lt;/div&gt;</span></code></pre>
+                                    </div>
+                                    <div class="code-example">
+                                        <div class="code-header">
+                                            <span class="filename">card.css</span>
+                                        </div>
+                                        <pre><code><span class="selector">.card</span> {
+    <span class="property">border</span>: <span class="value">1px solid #ddd</span>;
+    <span class="property">padding</span>: <span class="value">20px</span>;
+    <span class="property">border-radius</span>: <span class="value">8px</span>;
+}
+
+<span class="selector">.card-title</span> {
+    <span class="property">color</span>: <span class="value">#6366f1</span>;
+    <span class="property">font-size</span>: <span class="value">24px</span>;
+}
+
+<span class="selector">.btn:hover</span> {
+    <span class="property">background</span>: <span class="value">#6366f1</span>;
+    <span class="property">color</span>: <span class="value">white</span>;
+}</code></pre>
+                                    </div>
+                                </div>
+
+                                <h2>🎯 Resumo da Aula</h2>
+                                <div class="summary-box">
+                                    <h4>Seletores Aprendidos:</h4>
+                                    <ul class="summary-list">
+                                        <li><code>elemento</code> - Seleciona tag (ex: <code>p</code>, <code>h1</code>)</li>
+                                        <li><code>.classe</code> - Seleciona classe (reutilizável)</li>
+                                        <li><code>#id</code> - Seleciona ID (único)</li>
+                                        <li><code>*</code> - Seleciona todos</li>
+                                        <li><code>[attr]</code> - Seleciona atributo</li>
+                                        <li><code>div p</code> - Descendente (todos os filhos)</li>
+                                        <li><code>div > p</code> - Filho direto</li>
+                                        <li><code>h1 + p</code> - Irmão adjacente</li>
+                                        <li><code>a:hover</code> - Pseudo-classe</li>
+                                    </ul>
+                                </div>
+
+                                <div class="next-lesson">
+                                    <a href="aula03.html" class="btn btn-primary btn-large">
+                                        Próxima Aula: Flexbox →
+                                    </a>
+                                </div>
+                            </section>
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 CodeAprende - Ensino de front-end gratuito</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
